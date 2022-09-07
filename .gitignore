@@ -1,0 +1,17 @@
+# Node
+node_modules
+*.log
+.env
+lib/
+es/
+dist/
+npm-debug.log
+_book/
+package-lock.json
+__diff_output__
+
+# Mac
+.DS_Store
+
+# build
+.next
