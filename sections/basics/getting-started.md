@@ -1,26 +1,26 @@
-## Getting Started
+## Começar
 
-`styled-components` utilises tagged template literals to style your components.
+A `styled-components` utiliza modelos literais marcados para estilizar os teus componentes.
 
-It removes the mapping between components and styles. This means that when you're defining your styles, you're actually creating a normal React component, that has your styles attached to it.
+Ela remove o mapeamento entre os componentes e estilos. Isto significa que quando estás definindo os teus estilos, estás na realidade criando um componente de React normal, que tem os teus estilos anexados a ele.
 
-This example creates two simple components, a wrapper and a title, with some styles attached to it:
+Este exemplo cria dois componentes simples, um `wrapper` e um `title`, com alguns estilos anexados a eles:
 
 ```react
-// Create a Title component that'll render an <h1> tag with some styles
+// Cria um componente `Title` que tornar-se-á em um marcador `<h1>` com alguns estilos
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
 `;
 
-// Create a Wrapper component that'll render a <section> tag with some styles
+// Cria um componente `Wrapper` que tornar-se-á em um marcador `<section>` com alguns estilos
 const Wrapper = styled.section`
   padding: 4em;
   background: papayawhip;
 `;
 
-// Use Title and Wrapper like any other React component – except they're styled!
+// Utilize `Title` e `Wrapper` como qualquer outro componente de React – exceto que são estilizados!
 render(
   <Wrapper>
     <Title>
@@ -30,10 +30,10 @@ render(
 );
 ```
 
-This is a live editor, so play around with the code to get a feel for what it's like to work with styled-components!
+Isto é um editor ao vivo, então faça experimentos com o código para teres a sensação de como é trabalhar com `styled-components`!
 
-> The CSS rules are automatically vendor prefixed, styled-components takes care of that for you!
+> As regras de estilos são prefixadas automaticamente, a `styled-components` cuida disto por ti!
 >
-> Styled components uses [stylis.js](https://stylis.js.org/) package under the hood for prefixing the css rules.
+> Os componentes estilizados utilizam o pacote [stylis.js](https://stylis.js.org/) nos bastidores para aplicação de prefixos às regras de estilos.
 >
-> For additional information about the supported prefixes in stylis.js visit their [repository](https://github.com/thysultan/stylis.js).
+> Para obter informação sobre os prefixos suportados em **stylis.js** visite o seu [repositório](https://github.com/thysultan/stylis.js).
