@@ -1,17 +1,17 @@
-## Attaching additional props | v2
+## Anexando propriedades adicionais | v2
 
-To avoid unnecessary wrappers that just pass on some props to the rendered component, or element, you can use the [`.attrs` constructor](/docs/api#attrs). It allows you to attach additional props (or "attributes") to a component.
+Para evitar envolvedores desnecessários que só passam algumas propriedades para o componente interpretado, ou elemento, podes utilizar o [construtor `.attrs`](/docs/api#attrs). Isto permite-te prender propriedades adicionais (ou "atributos") para um componente.
 
-This way you can for example attach static props to an element, or pass a third-party prop like `activeClassName` to React Router's Link component. Furthermore you can also attach more dynamic props to a component. The `.attrs` object also takes functions, that receive the props that the component receives. The return value will be merged into the resulting props as well.
+Desta maneira podes por exemplo prender propriedades estáticas à um elemento, ou passar uma propriedade de terceiro como `activeClassName` para o componente `Link` da React Router. Além disto também podes prender mais propriedades dinâmicas à um componente. O objeto `.attrs` também recebe funções, que recebem as propriedades que o componente recebe. O valor de retorno também será combinado com as propriedades resultantes.
 
-Here we render an `Input` component and attach some dynamic and static attributes to it:
+Cá interpretamos um componente `Input` e prendemos alguns atributos estáticos e dinâmicos nele:
 
 ```react
 const Input = styled.input.attrs(props => ({
-  // we can define static props
+  // podemos definir propriedades estáticas
   type: "text",
 
-  // or we can define dynamic ones
+  // ou podemos definir propriedades dinâmicas
   size: props.size || "1em",
 }))`
   color: palevioletred;
@@ -19,7 +19,7 @@ const Input = styled.input.attrs(props => ({
   border: 2px solid palevioletred;
   border-radius: 3px;
 
-  /* here we use the dynamically computed prop */
+  /* cá utilizamos a propriedade computada dinamicamente */
   margin: ${props => props.size};
   padding: ${props => props.size};
 `;
@@ -33,14 +33,16 @@ render(
 );
 ```
 
-As you can see, we get access to our newly created props in the interpolations, and the `type` attribute is passed down to the element.
+Como podes ver, acessamos as nossas propriedades criadas recentemente nas interpolações, e o atributo `type` é passado ao elemento.
 
-### Overriding .attrs
-Notice that when wrapping styled components, `.attrs` are applied from the innermost styled component to the outermost styled component.
+### Sobrepondo `.attrs`
 
-This allows each wrapper to **override** nested uses of `.attrs`, similarly to how css properties defined later in a stylesheet override previous declarations.
+Repare que quando estiveres envolvendo os componentes estilizados, os `.attrs` são aplicados desde o componente estilizado mais interno até o componente estilizado mais externo.
 
-`Input`'s `.attrs` are applied first, and then `PasswordInput`'s `.attrs`:
+Isto permite que cada envolvedor **sobrepor** usos encaixados de `.attrs`, da mesma forma como as propriedades de css definidas depois em uma folha de estilo sobrepõem declarações anteriores.
+
+Os `.attrs` do `Input` são aplicados primeiro, e depois os `.attrs` do `PasswordInput`:
+
 ```react
 const Input = styled.input.attrs(props => ({
   type: "text",
@@ -51,11 +53,11 @@ const Input = styled.input.attrs(props => ({
   padding: ${props => props.size};
 `;
 
-// Input's attrs will be applied first, and then this attrs obj
+// Os atributos do `Input` serão aplicados primeiro, e depois este objeto de atributos
 const PasswordInput = styled(Input).attrs({
   type: "password",
 })`
-  // similarly, border will override Input's border
+  // da mesma maneira, a borda irá sobrepor a borda do `Input`
   border: 2px solid aqua;
 `;
 
@@ -63,9 +65,9 @@ render(
   <div>
     <Input placeholder="A bigger text input" size="2em" />
     <br />
-    {/* Notice we can still use the size attr from Input */}
+    {/* Repare que ainda podemos utilizar o atributo `size` de `Input` */}
     <PasswordInput placeholder="A bigger password input" size="2em" />
   </div>
 );
 ```
-This is why `PasswordInput` is of a password type, but still uses the `size` attribute from `Input`.
+Isto porque `PasswordInput` é de um tipo de senha, mas ainda utiliza o atributo `size` de `Input`.
