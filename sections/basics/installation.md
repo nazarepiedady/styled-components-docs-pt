@@ -1,18 +1,18 @@
-## Installation
+## Instalação
 
-Installing styled-components only takes a single command and you're ready to roll:
+A instalação de `styled-components` é feita em apenas um comando e depois estás pronto para avançar:
 
 ```
-# with npm
+# com o npm
 npm install --save styled-components
 
-# with yarn
+# com o yarn
 yarn add styled-components
 ```
 
-If you use a package manager like [yarn](https://yarnpkg.com/) that supports the "resolutions" package.json field, we also highly recommend you add an entry to it as well corresponding to the major version range. This helps avoid an entire class of problems that arise from multiple versions of styled-components being installed in your project.
+Se utilizas um gestor de pacote como [yarn](https://yarnpkg.com/) que suporta o campo "resolutions" no `package.json`, nós também recomendamos fortemente que adiciones uma entrada para ele bem como a correspondência ao limite de versão mais importante. Isto ajuda a evitar uma classe inteira de problemas que surgem a partir de múltiplas versões de `styled-components` sendo instaladas no teu projeto.
 
-In `package.json`:
+No `package.json`:
 
 ```json
 {
@@ -22,18 +22,18 @@ In `package.json`:
 }
 ```
 
-> It's highly recommended (but not required) to also use the [Babel plugin](/docs/tooling#babel-plugin). It offers many benefits like more legible class names, server-side rendering compatibility, smaller bundles, and more.
+> É altamente recomendo (mas não obrigatório) à também utilizar a [extensão Babel](/docs/tooling#babel-plugin). Ele oferece muitos benefícios como nomes de classe mais legíveis, compatibilidade com a interpretação feita no lado do servidor, pacotes mais pequenos, e muito mais.
 
 <details>
-  <summary>Click here to see alternative CDN installation instructions</summary>
+  <summary>Clique aqui para ver instruções de instalação de CDN alternativa</summary>
 
-If you're not using a module bundler or package manager we also have a global ("UMD") build hosted on the [unpkg](http://unpkg.com) CDN. Simply add the following `<script>` tag to the bottom of your HTML file:
+Se não estiveres utilizando um empacotador de módulo ou gestor de pacote, neste caso nós também temos um construção ("UMD") global hospedada no CDN [unpkg](https://unpkg.com). Simplesmente adicione o seguinte marcador `<script>` no final do teu ficheiro HTML:
 
 ```html
 <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
 ```
 
-Once you've added `styled-components` you will have access to the global `window.styled` variable.
+Uma vez adicionado o `styled-components` terás acesso a variável global `window.styled`.
 
 ```js
 const Component = window.styled.div`
@@ -41,6 +41,6 @@ const Component = window.styled.div`
 `
 ```
 
-> This style of usage requires the [react CDN bundles](https://reactjs.org/docs/cdn-links.html) and the [`react-is` CDN bundle](https://unpkg.com/react-is/umd/react-is.production.min.js) to be on the page as well (before the styled-components script.)
+> Esta forma de utilização requer que os [pacotes de CDN de react](https://reactjs.org/docs/cdn-links.html) e o [pacote de CDN `react-is`](https://unpkg.com/react-is/umd/react-is.production.min.js) estejam na página bem como (antes do marcador `script` de `styled-components`.)
 
 </details>
