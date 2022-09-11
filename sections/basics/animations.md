@@ -1,9 +1,9 @@
-## Animations
+## Animações
 
-CSS animations with `@keyframes` aren't scoped to a single component but you still don't want them to be global to avoid name collisions. This is why we export a `keyframes` helper which will generate a unique instance that you can use throughout your app:
+As animações de CSS com `@keyframes` não estão limitadas a um único componente mas ainda assim não irás querer que sejam globais para evitar colisões de nome. É por isso que nós exportamos um auxiliar `keyframes` que gerará uma única instância que poderás utilizar em toda a tua aplicação:
 
 ```react
-// Create the keyframes
+// Cria os `keyframes`
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -14,7 +14,7 @@ const rotate = keyframes`
   }
 `;
 
-// Here we create a component that will rotate everything we pass in over two seconds
+// Cá nós criamos um componente que girará tudo que nós passarmos para ele em dois segundos
 const Rotate = styled.div`
   display: inline-block;
   animation: ${rotate} 2s linear infinite;
@@ -27,22 +27,22 @@ render(
 );
 ```
 
-> Keyframes are not supported by `react-native`. Instead, use the [`ReactNative.Animated` API](https://stackoverflow.com/questions/50891046/rotate-an-svg-in-react-native/50891225#50891225).
+> As `keyframes` não são suportadas pela `react-native`. No lugar dela, utilize a [API `ReactNative.Animated`](https://stackoverflow.com/questions/50891046/rotate-an-svg-in-react-native/50891225#50891225).
 
-Keyframes are lazily injected when they're used, which is how they can be code-split, so you have to use [the `css` helper](/docs/api#css) for shared style fragments:
+As `keyframes` são preguiçosamente injetadas quando são utilizadas, que é como elas podem ter seu código fragmentado, assim precisas utilizar [o auxiliar `css`](/docs/api#css) para fragmentos de estilo partilhado:
 
 ```javascript
 const rotate = keyframes``
 
-// ❌ This will throw an error!
+// ❌ Isto lançará um erro!
 const styles = `
   animation: ${rotate} 2s linear infinite;
 `
 
-// ✅ This will work as intended
+// ✅ Isto funcionará como é suposto
 const styles = css`
   animation: ${rotate} 2s linear infinite;
 `
 ```
 
-> This used to work in v3 and below where we didn't code-split keyframes. If you're upgrading from v3, make sure that all your shared style fragments are using the `css` helper!
+> Isto costumava a funcionar na versão 3 para baixo onde nós não fragmentávamos o código de `keyframes`. Se estiveres atualizando a partir da versão 3, certifica-te de que todos os teus fragmentos de estilo partilhados estejam a utilizar o auxiliar `css`!
