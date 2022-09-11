@@ -1,7 +1,6 @@
 ## React Native
 
-styled-components can be used with React Native in the same way and with the
-same import. Try this example with [Snack by Expo](https://snack.expo.io/@danielmschmidt/styled-components).
+As `styled-components` podem ser utilizadas com a React Native da mesma maneira e com a mesma importação. Experimente este exemplo com [Snack by Expo](https://snack.expo.io/@danielmschmidt/styled-components).
 
 ```jsx
 import React from 'react'
@@ -26,16 +25,11 @@ class MyReactNativeComponent extends React.Component {
 }
 ```
 
-We also support more complex styles (like `transform`), which would normally
-be an array, and shorthands (e.g. for `margin`) thanks to
-[`css-to-react-native`](https://github.com/styled-components/css-to-react-native)!
+Nós também suportamos estilos mais complexos (tais como `transform`), que normalmente seria um arranjo (*array*, em Inglês), e abreviações (por exemplo para `margin`) graças ao [`css-to-react-native`](https://github.com/styled-components/css-to-react-native)!
 
-> Note that the `flex` property works like CSS shorthand, and not the legacy
-> `flex` property in React Native. Setting `flex: 1` sets `flexShrink`
-> to `1` in addition to setting `flexGrow` to `1` and `flexBasis` to `0`.
+> Nota que a propriedade `flex` funciona tal como a abreviação de CSS, e não como a propriedade legada `flex` em React Native. A definição de `flex: 1` define `flexShrink` para `1` além de definir `flexGrow` para `1` e `flexBasis` para `0`.
 
-Imagine how you'd write the property in React Native, guess how you'd transfer
-it to CSS, and you're probably right:
+Imagina como escreverias a propriedade na React Native, adivinha como a transferirias para a CSS, e provavelmente estás certo:
 
 ```jsx
 const RotatedBox = styled.View`
@@ -46,15 +40,11 @@ const RotatedBox = styled.View`
 `
 ```
 
-Some of the differences to the web-version are, that you cannot use the
-`keyframes` and `createGlobalStyle` helpers since React Native doesn't support
-keyframes or global styles. We will also warn you if you use media queries or
-nest your CSS.
 
-> In v2 we support percentages. To make this possible we need to enforce units
-> for all shorthands. If you're migrating to v2,
-> [a codemod is available](https://github.com/styled-components/styled-components-native-code-mod).
+Algumas das diferenças em relação a versão de web são, que não podes utilizar os auxiliares `keyframes` e `createGlobalStyle` visto que a React Native não suporta `keyframes` ou estilos globais. Nós também iremos avisar-te se utilizares consultas de media (*media queries*, em Inglês) ou encaixares o teu CSS.
 
-### Simpler usage with the metro bundler
+> Na versão 2 nós suportamos percentagens. Para tornar isto possível nós precisamos forçar unidades para todas abreviações. Se estiveres migrando para a versão 2, [um `codemod` está disponível](https://github.com/styled-components/styled-components-native-code-mod).
 
-If you'd prefer to just import `styled-components` instead of `styled-components/native`, you can add a [`resolverMainFields` configuration](https://facebook.github.io/metro/docs/configuration#resolvermainfields) that includes `"react-native"`. This used to be supported in metro by default (and currently does work in haul) but appears to have been removed at some point.
+### Utilização simplificada com o empacotador metro
+
+Se preferirias apenas importar a `styled-components` no lugar de `styled-components/native`, podes adicionar uma [configuração para `resolverMainFields`](https://facebook.github.io/metro/docs/configuration#resolvermainfields) que inclui `"react-native"`. Isto costumava a ser suportado no `metro` por padrão (e atualmente funciona em pilhagem) mas parece ter sido removido algum momento.
