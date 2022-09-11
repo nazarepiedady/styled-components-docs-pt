@@ -1,11 +1,11 @@
-## Styling any component
+## Estilizando qualquer componente
 
-The `styled` method works perfectly on all of your own or any third-party component, as long as they attach the passed `className` prop to a DOM element.
+O método `styled` funciona perfeitamente sobre todos os teus ou qualquer componente de terceiro enquanto eles anexarem a propriedade `className` passada para um elemento de DOM.
 
-> If you are using `react-native` keep in mind to use `style` instead of `className`.
+> Se estiveres utilizando `react-native` lembra-te de utilizar `style` no lugar de `className`.
 
 ```react
-// This could be react-router-dom's Link for example
+// Isto poderia ser por exemplo o `Link` do `react-router-dom`
 const Link = ({ className, children }) => (
   <a className={className}>
     {children}
@@ -26,4 +26,4 @@ render(
 );
 ```
 
-> You can also pass tag names into the `styled()` factory call, like so: `styled("div")`. In fact, the `styled.tagname` helpers are just aliases that do the same.
+> Tu também podes passar nomes de marcador para uma chamada de produção `styled()`, desta maneira: `styled("div")`. De fato, os auxiliares de `styled.tagname` são apenas pseudónimos que fazem o mesmo.
