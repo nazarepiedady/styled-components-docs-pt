@@ -6,13 +6,13 @@ export default ({ children }) => (
   <Content data-e2e-id="content">
     <AlignCenter>
       <a href="https://github.com/styled-components/styled-components">
-        <Badge src="/api/proxy/stars.svg" alt="Stars on GitHub" />
+        <Badge src="/api/proxy/stars.svg" alt="Estrelas na GitHub" />
       </a>
       <a href="https://www.npmjs.com/package/styled-components">
-        <Badge src="/api/proxy/npm-v.svg" alt="Current version" />
+        <Badge src="/api/proxy/npm-v.svg" alt="Versão atual" />
       </a>
       <Badge src="/api/proxy/downloads.svg" alt="Monthly downloads" />
-      <Badge src="/api/proxy/size.svg" alt="Gzipped size" />
+      <Badge src="/api/proxy/size.svg" alt="Tamanho Gzipado" />
       <a href="https://discord.gg/hfGUrbrxaU">
         <Badge alt="Discord" src="https://img.shields.io/discord/818449605409767454" />
       </a>
@@ -21,23 +21,23 @@ export default ({ children }) => (
   </Content>
 )
 
-# Getting started
+# Começar
 
-## Installation
+## Instalação
 
-To download styled-components run:
+Para descarregar a `styled-components` execute:
 
 ```
 npm install --save styled-components
 ```
 
-That's all you need to do, you are now ready to use it in your app! (yep, no build step needed 👌)
+É tudo que precisas fazer, agora estás pronto para utilizá-la na tua aplicação! (sim, e sem necessidade da etapa de construção 👌).
 
-> It's recommended (but not required) to also use the [styled-components Babel plugin](https://github.com/styled-components/babel-plugin-styled-components) if you can. It offers many benefits like more legible class names, server-side rendering compatibility, smaller bundles, and more.
+> É recomendado (mas não obrigatório) também utilizar a [extensão de Babel de `styled-components`](https://github.com/styled-components/babel-plugin-styled-components) se poderes. Ela oferece muitos benefícios tais como nomes de classe mais legíveis, compatibilidade com a interpretação feita no lado do servidor, pacotes menores, e muito mais.
 
-## Your first styled component
+## O teu primeiro componente estilizado
 
-Let's say you want to create a simple and reusable `<Button />` component that you can use throughout your application. There should be a normal version and a big and `primary` version for the important buttons. This is what it should look like when rendered: (this is a live example, click on them!)
+Vamos dizer que queres criar um componente `<Button />` simples e reutilizável que podes utilizar por toda tua aplicação. Existirá um versão normal e uma grande e uma versão `primária` para os botões importantes. Isto é como ela deve se parecer quando interpretado: (isto é um exemplo ao vivo, clique neles!)
 
 <AlignCenter>
   <ExampleButton
@@ -57,7 +57,7 @@ Let's say you want to create a simple and reusable `<Button />` component that y
   </ExampleButton>
 </AlignCenter>
 
-First, let's import styled-components and create a `styled.button`:
+Primeiro, vamos importar a `styled-components` e criar um `styled.button`:
 
 ```jsx
 import styled from 'styled-components'
@@ -65,18 +65,17 @@ import styled from 'styled-components'
 const Button = styled.button``
 ```
 
-This `Button` variable here is now a React component that you can use like any other React component! This unusual backtick syntax is a new JavaScript feature called a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
+Agora esta variável `Button` é um componente de React que podes utilizar como qualquer outro componente de React! Esta sintaxe estranha de acento grave é uma nova funcionalidade de JavaScript chamada de [literal de modelo marcado](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
 
-You know how you can call functions with parenthesis? (`myFunc()`) Well, now you can also call functions with backticks! ([learn more about tagged template literals](/docs/advanced#tagged-template-literals))
+Tu sabes como podes chamar funções com parênteses? (`myFunc()`) Bem, agora também podes chamar funções com acentos graves! ([aprenda mais sobre os literais de modelo marcado](/docs/advanced#tagged-template-literals))
 
-If you render our lovely component now (just like any other component: `<Button />`) this is what you get:
+Se agora interpretares o nosso componente adorável (tal como qualquer outro componente: `<Button />`) isto é o que terás:
 
 <AlignCenter>
   <button>I'm a &lt;Button /&gt;!</button>
 </AlignCenter>
 
-It renders a button! That's not a very nice button though 😕 we can do better than this,
-let's give it a bit of styling and tickle out the hidden beauty within!
+Ele interpreta um botão! Não é lá um botão adorável 😕 nós podemos fazer melhor do que isto, vamos dá-lo um pouco de estilo e revelar a beleza interna escondido!
 
 ```jsx
 const Button = styled.button`
@@ -93,9 +92,9 @@ const Button = styled.button`
   <SecondButton>I'm a styled &lt;Button /&gt;</SecondButton>
 </AlignCenter>
 
-As you can see, styled-components lets you write actual CSS in your JavaScript. This means you can use all the features of CSS you use and love, including (but by far not limited to) media queries, all pseudo-selectors, nesting, etc.
+Como podes ver, `styled-components` te permite de fato escrever CSS no teu JavaScript. Isto significa que podes utilizar todas as funcionalidades de CSS que amas, incluindo (mas não limitando-se aos mesmos) consultas de media (*media queries*, em Inglês), todos pseudo-seletores, encaixamento, etc.
 
-The last step is that we need to define what a primary button looks like. To do that we also import `{ css }` from `styled-components` and interpolate a function into our template literal, which gets passed the props of our component:
+O último passo é que nós precisamos definir com que um botão primário se parece. Para fazer isto nós também importamos `{ css }` de  `styled-components` e interpolamos uma função dentro do nosso literal de modelo, para o qual é passado as propriedades do nosso componente: 
 
 ```jsx
 import styled, { css } from 'styled-components'
@@ -117,9 +116,9 @@ const Button = styled.button`
 `
 ```
 
-Here we're saying that when the `primary` property is set we want to add some more `css` to our component, in this case change the background and color.
+Aqui estamos dizendo que quando a propriedade `primary` é definida nós queremos adicionar mais `css` ao nosso componente, neste caso mude a cor do texto e do fundo.
 
-That's all, we're done! Take a look at our finished component:
+É tudo, terminamos! Observe o nosso componente acabado:
 
 ```react
 const Button = styled.button`
@@ -148,6 +147,6 @@ render(
 );
 ```
 
-Nice 😍 That's a live updating editor too, so play around with it a bit to get a feel for what it's like to work with styled-components! Once you're ready, dive into the documentation to learn about all the cool things styled-components can do for you:
+Boa 😍 isto também é um editor de atualização ao vivo, assim brinque com ele um pouco para teres uma ideia de como é trabalhar com `styled-components`! Uma vez que estiveres pronto, mergulhe dentro da documentação para aprender mais sobre todas coisas fantásticas que a `styled-components` pode fazer por ti:
 
-<NextPage title="Documentation" href="/docs" />
+<NextPage title="Documentação" href="/docs" />
