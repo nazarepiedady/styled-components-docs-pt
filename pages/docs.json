@@ -1,38 +1,38 @@
 {
   "pages": [
     {
-      "title": "Basics",
+      "title": "Fundamentos",
       "pathname": "basics",
       "sections": [
         {
-          "title": "Motivation"
+          "title": "Motivação"
         },
         {
-          "title": "Installation"
+          "title": "Instalação"
         },
         {
-          "title": "Getting Started"
+          "title": "Começar"
         },
         {
-          "title": "Adapting based on props"
+          "title": "Adaptando com base nas propriedades"
         },
         {
-          "title": "Extending styles"
+          "title": "Estendendo os estilos"
         },
         {
-          "title": "Styling any component"
+          "title": "Estilizando qualquer componente"
         },
         {
-          "title": "Passed props"
+          "title": "Propriedades passadas"
         },
         {
-          "title": "Coming from CSS"
+          "title": "Chegando da CSS"
         },
         {
-          "title": "Attaching additional props"
+          "title": "Anexando propriedades adicionais"
         },
         {
-          "title": "Animations"
+          "title": "Animações"
         },
         {
           "title": "React Native"
@@ -40,50 +40,50 @@
       ]
     },
     {
-      "title": "Advanced",
+      "title": "Avançado",
       "pathname": "advanced",
       "sections": [
         {
-          "title": "Theming"
+          "title": "Criando Temas"
         },
         {
-          "title": "Refs"
+          "title": "Referências"
         },
         {
-          "title": "Security"
+          "title": "Segurança"
         },
         {
-          "title": "Existing CSS"
+          "title": "CSS Existente"
         },
         {
-          "title": "Tagged Template Literals"
+          "title": "Literais de Modelo Marcado"
         },
         {
-          "title": "Server Side Rendering"
+          "title": "Interpretação no Lado do Servidor"
         },
         {
-          "title": "Referring to other components"
+          "title": "Referindo-se a outros componentes"
         },
         {
-          "title": "Style Objects"
+          "title": "Objetos de Estilo"
         }
       ]
     },
     {
-      "title": "API Reference",
+      "title": "Referência da API",
       "pathname": "api",
       "sections": [
         {
-          "title": "Primary"
+          "title": "Prioritário"
         },
         {
-          "title": "Helpers"
+          "title": "Auxiliares"
         },
         {
-          "title": "Test Utilities"
+          "title": "Utilitários de Teste"
         },
         {
-          "title": "Supported CSS"
+          "title": "CSS Suportado"
         },
         {
           "title": "Flow"
@@ -92,34 +92,34 @@
           "title": "TypeScript"
         },
         {
-          "title": "Previous APIs"
+          "title": "APIs Anteriores"
         }
       ]
     },
     {
-      "title": "Tooling",
+      "title": "Ferramental",
       "pathname": "tooling",
       "sections": [
         {
-          "title": "Babel Plugin"
+          "title": "Extensão Babel"
         },
         {
-          "title": "Babel Macro"
+          "title": "Macro Babel"
         },
         {
-          "title": "TypeScript Plugin"
+          "title": "Extensão TypeScript"
         },
         {
-          "title": "Jest Integration"
+          "title": "Integração de Jest"
         },
         {
           "title": "Stylelint"
         },
         {
-          "title": "Styled Theming"
+          "title": "Criação de Temas Estilizados"
         },
         {
-          "title": "Syntax Highlighting"
+          "title": "Realçando a Sintaxe"
         }
       ]
     },
@@ -128,55 +128,55 @@
       "pathname": "faqs",
       "sections": [
         {
-          "title": "What do I need to do to migrate to v5?"
+          "title": "O que preciso fazer para migrar para v5?"
         },
         {
-          "title": "What do I need to do to migrate to v4?"
+          "title": "O que preciso fazer para migrar para v4?"
         },
         {
-          "title": "Can I nest rules?"
+          "title": "Posso encaixar regras?"
         },
         {
-          "title": "Can I use css frameworks?"
+          "title": "Posso utilizar abstrações de CSS?"
         },
         {
-          "title": "How can I override styles with higher specificity?"
+          "title": "Como posso sobrepor estilos com especificidade superior?"
         },
         {
-          "title": "How can I override inline styles?"
+          "title": "Como posso sobrepor estilos em linha?"
         },
         {
-          "title": "Why do my DOM nodes have two classes?"
+          "title": "Porquê que os meus nós de DOM têm duas classes?"
         },
         {
-          "title": "When to use attrs?"
+          "title": "Quando utilizar atributos?"
         },
         {
-          "title": "Why should I avoid declaring styled components in the render method?"
+          "title": "Porquê deveria evitar declaração de componentes estilizados no método 'render'?"
         },
         {
-          "title": "I am a library author. Should I bundle styled-components with my library?"
+          "title": "Eu sou um autor de biblioteca. Eu deveria empacotar styled-components com a minha biblioteca?"
         },
         {
-          "title": "Why am I getting a warning about several instances of module on the page?"
+          "title": "Porquê que eu estou recebendo avisos a respeito de várias instâncias do módulo na página?"
         },
         {
-          "title": "Why am I getting HTML attribute warnings?"
+          "title": "Porquê eu estou recebendo avisos em relação ao atributo de HTML?"
         },
         {
-          "title": "Which browsers are supported?"
+          "title": "Quais navegadores são suportados?"
         },
         {
-          "title": "How do I use styled-components with create-react-app?"
+          "title": "Como é que eu utilizo 'styled-components' com 'create-react-app'?"
         },
         {
-          "title": "How can I fix issues when using npm link or yarn link?"
+          "title": "Como eu posso corrigir problemas quando estiver utilizando 'npm link' ou 'yarn link'?"
         },
         {
-          "title": "How do I fix flickering text after server side rendering?"
+          "title": "Como eu corrijo o texto tremente depois interpretação no lado do servidor?"
         },
         {
-          "title": "Missing Declarations for styled-components/native?"
+          "title": "Declarações Faltando para 'styled-components/native'?"
         }
       ]
     }
