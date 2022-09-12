@@ -65,7 +65,7 @@ render(
     </Button>
 
     <Button as={Link} href="/docs">
-      Documentation
+      Documentação
     </Button>
   </div>
 )
@@ -81,7 +81,7 @@ const Title = styled.div`
 `;
 
 const Logo = styled.img.attrs((/* props */) => ({
-  alt: 'styled-components Logo',
+  alt: 'Logótipo da styled-components',
   src: '/logo.png',
 }))`
   width: ${rem(125)};
@@ -200,9 +200,9 @@ class Index extends PureComponent {
               <Logo />
 
               <Title>
-                <Tagline>Visual primitives for the component age.</Tagline>
+                <Tagline>Primitivos visuais para a época de componente.</Tagline>
                 <SupportingTagline>
-                  Use the best bits of ES6 and CSS to style your apps without stress 💅🏾
+                  Utilize os melhores pedaços de ES6 e CSS para estilizar as tuas aplicações sem pressão 💅🏾
                 </SupportingTagline>
               </Title>
 
@@ -216,14 +216,14 @@ class Index extends PureComponent {
               </EditorContainer>
             </LiveProvider>
 
-            <UsersHeading>Used by folks at</UsersHeading>
+            <UsersHeading>Utilizado por pessoas na</UsersHeading>
           </Content>
           <UsersLogos users={sortedCompanies.filter((v, i) => i % 2)} />
           <UsersLogos reverse users={sortedCompanies.filter((v, i) => !(i % 2))} />
-          <ShowcaseHeading>To create beautiful websites like these</ShowcaseHeading>
+          <ShowcaseHeading>Para criar sítios bonitos como estes</ShowcaseHeading>
           <SmallShowcase projects={sortedProjects} />
         </Wrapper>
-        <ShowcaseLink href="/showcase">Discover more</ShowcaseLink>
+        <ShowcaseLink href="/showcase">Descubra mais</ShowcaseLink>
 
         <HomepageGettingStarted />
 
