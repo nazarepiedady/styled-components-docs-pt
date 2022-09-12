@@ -10,7 +10,7 @@ import OldAPIs from '../../sections/api/old/index.md'
 import TestUtilities from '../../sections/api/test-utils/index.md'
 
 export default ({ children }) => (
-  <DocsLayout title="API Reference" description="API Reference of styled-components">
+  <DocsLayout title="Referência da API" description="Referência da API da styled-components">
     {children}
   </DocsLayout>
 )
@@ -23,4 +23,4 @@ export default ({ children }) => (
 <TypeScript />
 <OldAPIs />
 
-<NextPage href="/docs/tooling" title="Tooling" />
+<NextPage href="/docs/tooling" title="Ferramental" />
