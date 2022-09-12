@@ -43,13 +43,11 @@ const SubHeader = styled.h3`
 
 const Documentation = () => (
   <DocsLayout
-    title="Documentation"
-    description="Learn how to use styled-components and to style your apps without stress"
+    title="Documentação"
+    description="Aprenda como utilizar a styled-components e a estilizar as tuas aplicações sem pressão"
   >
     <p>
-      Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components
-      allows you to write actual CSS code to style your components. It also removes the mapping between components and
-      styles – using components as a low-level styling construct could not be easier!
+      Utilizar literais de modelo marcado (uma adição recente à JavaScript) e o poder da CSS, styled-components permite-te escrever código de CSS para estilizar os teus componentes. Ela também remove o mapeamento entre os componentes e estilos – utilizando componentes como um construtor de estilos de baixo nível não poderia ser mais fácil!
     </p>
 
     <Row>
