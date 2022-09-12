@@ -277,7 +277,7 @@ const Showcase = ({ router }) => {
 
   return (
     <>
-      <SeoHead title={`styled-components: Showcase ${title}`}>
+      <SeoHead title={`styled-components: Mostruário ${title}`}>
         <meta name="robots" content="noodp" />
       </SeoHead>
       <WithIsScrolled>{({ isScrolled }) => <Nav showSideNav={false} transparent={!isScrolled} />}</WithIsScrolled>
@@ -288,30 +288,29 @@ const Showcase = ({ router }) => {
             <InsetWrapper>
               <HeaderContent>
                 <div>
-                  <h2>Awesome websites, by awesome humans beings.</h2>
+                  <h2>Sítios incríveis, por seres humanos incríveis.</h2>
                   <h5>
-                    Styled components is used by teams all around the world to create beautiful websites, like these
-                    ones:
+                    Os componentes estilizados são utilizados por equipas em todo mundo para criar sítios bonitos, tais como estes:
                   </h5>
                 </div>
                 <HeaderActions>
                   <NativeSelect name="category" id="categorySelect" value="all">
-                    <option value="all">All</option>
+                    <option value="all">Todos</option>
                   </NativeSelect>
                   <a
                     href="https://github.com/styled-components/styled-components-website/issues/new?template=company-showcase-request.md&title=Add+%5Bproject%5D+by+%5Bcompany%5D+to+showcase"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Share yours!
+                    Partilhe os teus!
                   </a>
                 </HeaderActions>
               </HeaderContent>
             </InsetWrapper>
           </Wrapper>
-          <HeaderDecoration>Showcase</HeaderDecoration>
-          <HeaderDecoration offset={1}>Showcase</HeaderDecoration>
-          <HeaderDecoration offset={2}>Showcase</HeaderDecoration>
+          <HeaderDecoration>Mostruário</HeaderDecoration>
+          <HeaderDecoration offset={1}>Mostruário</HeaderDecoration>
+          <HeaderDecoration offset={2}>Mostruário</HeaderDecoration>
         </Header>
         <Body>
           <Wrapper>
