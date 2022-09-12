@@ -19,10 +19,9 @@ const ReleaseAnchor = styled(Anchor)`
 `;
 
 const Releases = ({ releases, sidebarPages }) => (
-  <DocsLayout useDocsSidebarMenu={false} pages={sidebarPages} title="Releases" description="Styled Components Releases">
+  <DocsLayout useDocsSidebarMenu={false} pages={sidebarPages} title="Lançamentos" description="Lançamentos de Componentes Estilizados">
     <Markdown options={{ wrapper: 'p' }}>
-      Updating styled components is usually as simple as `npm install`. Only major versions have the potential to
-      introduce breaking changes (noted in the following release notes).
+      Atualizar componentes estilizados normalmente é tão simples quanto `npm install`. Só as versões importantes possuem o potencial de introduzir mudanças com quebras de compatibilidade (mencionado nas seguintes notas de lançamento).
     </Markdown>
     {releases ? (
       releases.map((release) => (
