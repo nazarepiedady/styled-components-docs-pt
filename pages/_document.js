@@ -87,7 +87,7 @@ export default class MyDocument extends Document {
     reset();
 
     return (
-      <Html lang="en">
+      <Html lang="pt">
         <Head>
           <link rel="stylesheet" type="text/css" href="/dmvendor.css" />
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
