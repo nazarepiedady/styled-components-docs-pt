@@ -11,8 +11,8 @@ import SyntaxHighlighting from '../../sections/tooling/syntax-highlighting.md'
 
 export default ({ children }) => (
   <DocsLayout
-    title="Tooling"
-    description="Additional Tools for styled-components, babel and TypeScript plugins, testing"
+    title="Ferramental"
+    description="Ferramentas Adicionais para styled-components, extensões de Babel e TypeScript, testagem"
   >
     {children}
   </DocsLayout>
