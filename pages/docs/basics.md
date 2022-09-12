@@ -14,7 +14,7 @@ import Animations from '../../sections/basics/animations.md'
 import ReactNative from '../../sections/basics/react-native.md'
 
 export default ({ children }) => (
-  <DocsLayout title="Basics" description="Get Started with styled-components basics.">
+  <DocsLayout title="Fundamentos" description="Começar com fundamentos da styled-components.">
     {children}
   </DocsLayout>
 )
@@ -31,4 +31,4 @@ export default ({ children }) => (
 <Animations />
 <ReactNative />
 
-<NextPage href="/docs/advanced" title="Advanced" />
+<NextPage href="/docs/advanced" title="Avançado" />
