@@ -18,7 +18,7 @@ import DeclareComponentsInRenderMethod from '../../sections/faqs/declare-compone
 import MissingNativeImport from '../../sections/faqs/missing-native-import.md'
 
 export default ({ children }) => (
-<DocsLayout title="FAQs" description="Commonly asked questions about styled-components">
+<DocsLayout title="FAQs" description="Questões geralmente feitas a respeito da styled-components">
 {children}
 </DocsLayout>
 )
