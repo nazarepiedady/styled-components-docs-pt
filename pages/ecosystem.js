@@ -10,16 +10,16 @@ const Ecosystem = ({ readme, sidebarPages }) => (
   <DocsLayout
     useDocsSidebarMenu={false}
     pages={sidebarPages}
-    title="Ecosystem"
-    description="Ecosystem of styled-components"
+    title="Ecossistema"
+    description="Ecossistema de styled-components"
   >
     <p>
-      This is an incomplete list of awesome things built with styled-components. If you have something to share, please
-      add it to the{' '}
+      Esta é uma lista incompleta de coisas incríveis construídas com styled-components. Se tiveres alguma coisa a
+      partilhar, faça o favor de adicioná-la ao repositório{' '}
       <Link href="https://github.com/styled-components/awesome-styled-components" inline>
         awesome-styled-components
       </Link>{' '}
-      repo on GitHub and it will automatically show up here!
+      na GitHub e ela será automaticamente exibida aqui!
     </p>
     {typeof readme !== 'string' ? (
       <Loading />
@@ -31,6 +31,11 @@ const Ecosystem = ({ readme, sidebarPages }) => (
 
   If you know any projects build with styled components contributions and suggestions are always welcome!
   Please read the [contribution guidelines](https://github.com/styled-components/awesome-styled-components/blob/master/contributing.md) first and submit a PR.
+
+  ### Contribuir
+  
+  Se souberes quaisquer projetos construídos com os componentes estilizados, contribuições e sugestão são sempre bem-vindas!
+  Por favor leia primeiro as [diretrizes de contribuição](https://github.com/styled-components/awesome-styled-components/blob/master/contributing.md) e submeta um pedido para empurrar mudanças (PR).
         `}</Markdown>
     )}
   </DocsLayout>
