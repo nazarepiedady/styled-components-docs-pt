@@ -38,13 +38,13 @@ const NavLink = styled(Link).attrs((/* props */) => ({
 
 const NavLinks = () => (
   <Wrapper>
-    <NavLink href="/docs">Documentation</NavLink>
+    <NavLink href="/docs">Documentação</NavLink>
     <NavSeparator />
-    <NavLink href="/showcase">Showcase</NavLink>
+    <NavLink href="/showcase">Mostruário</NavLink>
     <NavSeparator />
-    <NavLink href="/ecosystem">Ecosystem</NavLink>
+    <NavLink href="/ecosystem">Ecossistema</NavLink>
     <NavSeparator />
-    <NavLink href="/releases">Releases</NavLink>
+    <NavLink href="/releases">Lançamentos</NavLink>
   </Wrapper>
 );
 
