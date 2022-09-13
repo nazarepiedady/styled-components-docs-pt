@@ -30,4 +30,4 @@ import StyleObjects from '../../sections/advanced/style-objects.md'
 <ComponentsAsSelectors />
 <StyleObjects />
 
-<NextPage href="/docs/api" title="API Reference" />
+<NextPage href="/docs/api" title="Referência da API" />
