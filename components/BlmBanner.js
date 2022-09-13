@@ -17,8 +17,11 @@ const Banner = styled.a`
 
 export const BlmBanner = () => {
   return (
+    <div aria-hidden="true"></div>
+    /*
     <Banner href="https://support.eji.org/give/153413/#!/donation/checkout">
       #BlackLivesMatter ✊🏿 <span style={{ textDecoration: `underline` }}>Support the Equal Justice Initiative</span>
     </Banner>
+    */
   );
 };
