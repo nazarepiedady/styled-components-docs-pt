@@ -55,7 +55,7 @@ const SecondaryMenu = styled.div`
 const LogoLink = styled(Link).attrs((/* props */) => ({
   unstyled: true,
   href: '/',
-  'aria-label': 'styled components',
+  'aria-label': 'componentes estilizados',
 }))`
   display: inline-block;
   vertical-align: center;
