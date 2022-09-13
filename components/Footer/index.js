@@ -73,7 +73,7 @@ const Footer = () => (
         </FooterLink>
         {' and '}
         <FooterLink inline href="https://github.com/orgs/styled-components/people">
-          contributors
+          Contribuidores
         </FooterLink>
         {'.'}
       </FooterContent>
