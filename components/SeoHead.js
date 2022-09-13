@@ -7,7 +7,7 @@ export default class SeoHead extends Component {
   render() {
     const {
       title = 'styled-components',
-      description = 'Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅🏾',
+      description = 'Visuais originais para a idade do componente. Utilize os melhores pedaços de ES6 e CSS para estilizar as tuas aplicações sem pressão 💅🏾',
       image = 'https://www.styled-components.com/atom.png',
       children,
       canonical,
@@ -28,7 +28,7 @@ export default class SeoHead extends Component {
 
         <meta name="google-site-verification" content="lWntYW6AWVMcShSIWLmOzKr8Wyek2TR-zuQn6_XGu_c" />
 
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale" content="pt_PT" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
