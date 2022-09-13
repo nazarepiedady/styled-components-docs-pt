@@ -47,7 +47,7 @@ const Icon = styled(KeyboardArrowRight)`
 const NextPage = ({ title, href }) => (
   <Wrapper unstyled href={href}>
     <div>
-      <Text>Continue on the next page</Text>
+      <Text>Continuar na próxima página</Text>
       <PageName>{title}</PageName>
     </div>
 
