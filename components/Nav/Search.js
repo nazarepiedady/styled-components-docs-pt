@@ -167,7 +167,7 @@ const Search = ({ isDocs, className }) => {
       <Button>
         <StyledSearchIcon />
       </Button>
-      <Input id={INPUT_ID} placeholder={isDocs ? `Search ...` : `Search docs ...`} ref={searchInput} type="search" />
+      <Input id={INPUT_ID} placeholder={isDocs ? `Pesquisar ...` : `Pesquisar na documentação ...`} ref={searchInput} type="search" />
     </Wrapper>
   );
 };
