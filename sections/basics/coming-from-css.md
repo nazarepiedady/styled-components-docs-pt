@@ -1,8 +1,8 @@
-## Coming from CSS
+## Chegando da CSS
 
-### How do Styled Components work within a component?
+### Como os Componentes Estilizados funcionam dentro de um componente?
 
-If you're familiar with importing CSS into your components (e.g. like CSSModules) you'll be used to doing something like this:
+Se estiveres familiarizado com a importação de CSS para dentro dos teus componentes (por exemplo, com Módulos de CSS (CSSModules)) estás acostumado a fazer algo do tipo:
 
 ```jsx
 import React from 'react';
@@ -30,7 +30,7 @@ export default class Counter extends React.Component {
 }
 ```
 
-Because a Styled Component is the _combination_ of the element and the rules that style it, we'd write `Counter` like this:
+Uma vez que um Componente Estilizado é a _combinação_ do elemento e as regras que o estilizam, escreveríamos `Counter` desta maneira:
 
 ```jsx
 import React from 'react';
@@ -64,13 +64,13 @@ export default class Counter extends React.Component {
 }
 ```
 
-Note that we added a "Styled" prefix to `StyledCounter` so that the React component `Counter` and the Styled Component `StyledCounter` don't clash names but remain easily identifiable in the React Developer Tools and Web Inspector.
+Nota que nós adicionamos um prefixo `"Styled"` ao `StyledCounter` assim o componente de React `Counter` e o Componente Estilizado `StyledCounter` não chocam-se nos nomes porém permanecem facilmente identificáveis na Ferramenta do Programador de React e Inspetor da Web.
 
-### Define Styled Components outside of the render method
+### Defina os Componentes Estilizados fora do método `render`
 
-It is important to define your styled components outside of the render method, otherwise it will be recreated on every single render pass. Defining a styled component within the render method will thwart caching and drastically slow down rendering speed, and should be avoided.
+É importante definir os teus componentes estilizados fora do método `render`, de outro modo serão recriados em toda vez que houver uma passagem de `render`. Definir um Componente Estilizado dentro do método `render` frustrará o cache e atrasará drasticamente a velocidade da interpretação, e deve ser evitado.
 
-Write your styled components the recommended way:
+Escreva os teus componentes estilizados da maneira recomendada:
 
 ```jsx
 const StyledWrapper = styled.div`
@@ -86,7 +86,7 @@ Instead of:
 
 ```jsx
 const Wrapper = ({ message }) => {
-  // WARNING: THIS IS VERY VERY BAD AND SLOW, DO NOT DO THIS!!!
+  // AVISO: ISTO É MUITO MAU E LENTO, NÃO FAÇA ISTO!!!
   const StyledWrapper = styled.div`
     /* ... */
   `;
@@ -95,40 +95,38 @@ const Wrapper = ({ message }) => {
 };
 ```
 
-**Recommended reading**: [Talia Marcassa](https://twitter.com/talialongname)
-wrote a great review of real-world usage, featuring lots of solid practical insights
-and comparisons with alternatives, in [Styled Components: To Use or Not to Use?](https://medium.com/building-crowdriff/styled-components-to-use-or-not-to-use-a6bb4a7ffc21)
+**Leitura recomendada**: [Talia Marcassa](https://twitter.com/talialongname) escreveu uma excelente analise de utilização no mundo real, traçando muitos entendimentos práticos e sólidos, e comparações com alternativas, em [Componentes Estilizados: Utilizar ou Não Utilizar](https://medium.com/building-crowdriff/styled-components-to-use-or-not-to-use-a6bb4a7ffc21).
 
-### Pseudoelements, pseudoselectors, and nesting
+### Pseudo-elementos, pseudo-seletores, e encaixamento
 
-The preprocessor we use, [stylis](https://github.com/thysultan/stylis.js), supports scss-like syntax for automatically nesting styles.
+O pré-processador que nós utilizados, [stylis](https://github.com/thysultan/stylis.js), suporta sintaxe parecida com a do SCSS para o encaixamento automático de estilos.
 
-Through this preprocessing, styled-components supports some advanced selector patterns:
+Através deste pré-processamento, `styled-components` suporta alguns padrões de seletor avançados:
 
-- `&` a single ampersand refers to **all instances** of the component; it is used for applying broad overrides:
+- `&` um único "e" comercial refere-se a **todas instâncias** do componente; isto é utilizado para aplicação de sobreposição alargada:
 
   ```react
   const Thing = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
     color: blue;
 
     &:hover {
-      color: red; // <Thing> when hovered
+      color: red; // <Thing> quando pairado
     }
 
     & ~ & {
-      background: tomato; // <Thing> as a sibling of <Thing>, but maybe not directly next to it
+      background: tomato; // <Thing> como um irmão de <Thing>, mas talvez não diretamente próximo a ele
     }
 
     & + & {
-      background: lime; // <Thing> next to <Thing>
+      background: lime; // <Thing> próximo ao <Thing>
     }
 
     &.something {
-      background: orange; // <Thing> tagged with an additional CSS class ".something"
+      background: orange; // <Thing> marcado com uma classe ".something" de CSS adicional
     }
 
     .something-else & {
-      border: 1px solid; // <Thing> inside another element labeled ".something-else"
+      border: 1px solid; // <Thing> dentro de um elemento rotulado com ".something-else"
     }
   `
 
@@ -146,7 +144,7 @@ Through this preprocessing, styled-components supports some advanced selector pa
   )
   ```
 
-- `&&` a double ampersand refers to **an instance** of the component; this is useful if you're doing conditional styling overrides and don't want a style to apply to _all instances_ of a particular component:
+- `&&` um duplo "e" comercial refere-se à **uma instância** do componente; isto é útil se estiveres fazendo com que uma estilização condicional se sobreponha e não queres que um estilo se aplique a _todas instâncias_ de um componente em particular:
 
   ```react
   const Input = styled.input.attrs({ type: "checkbox" })``;
@@ -203,7 +201,7 @@ Through this preprocessing, styled-components supports some advanced selector pa
   )
   ```
 
-- `&&` a double ampersand alone has a special behavior called a "precedence boost"; this can be useful if you are dealing with a mixed styled-components and vanilla CSS environment where there might be conflicting styles:
+- `&&` um duplo "e" comercial sozinho tem um comportamento especial chamado de um "impulso de precedência"; isto pode ser útil se estiveres lidando com uma mistura de `styled-components` e ambiente de CSS puro onde haveria estilos contraditórios:
 
   ```react
    const Thing = styled.div`
@@ -228,14 +226,14 @@ Through this preprocessing, styled-components supports some advanced selector pa
    )
   ```
 
-If you put selectors in without the ampersand, they will refer to children of the component.
+Se pores os seletores sem o "e" comercial, eles se referirão aos filhos do componente.
 
 ```react
 const Thing = styled.div`
   color: blue;
 
   .something {
-    border: 1px solid; // an element labeled ".something" inside <Thing>
+    border: 1px solid; // um elemento rotulado de ".something" dentro de <Thing>
     display: block;
   }
 `
