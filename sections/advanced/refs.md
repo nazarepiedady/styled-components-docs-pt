@@ -1,9 +1,9 @@
-## Refs | v4
+## Referências | v4
 
-Passing a `ref` prop to a styled component will give you one of two things depending on the styled target:
+A passagem de uma propriedade `ref` para um componente estilizado dar-te-á uma das duas coisas dependendo do alvo estilizado:
 
-- the underlying DOM node (if targeting a basic element, e.g. `styled.div`)
-- a React component instance (if targeting a custom component e.g. extended from `React.Component`)
+- o nó de DOM subjacente (se estiveres apontando para um elemento básico, por exemplo `styled.div`)
+- uma instância de componente de React (se estiveres apontando para um componente personalizado, por exemplo estendido de `React.Component`)
 
 ```react
 const Input = styled.input`
@@ -39,4 +39,4 @@ render(
 );
 ```
 
-> Using an older version of styled-components (below 4.0.0) or of React? Use the [`innerRef` prop](/docs/api#innerref-prop) instead.
+> Estás utilizando uma versão mais antiga da `styled-components` (abaixo de 4.0.0) ou uma versão mais antiga de React? Utilize a [propriedade `innerRef`](/docs/api#innerref-prop).
