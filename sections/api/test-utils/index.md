@@ -2,7 +2,7 @@ import Find from './find.md'
 import FindAll from './find-all.md'
 import EnzymeFind from './enzyme-find.md'
 
-## Test Utilities
+## Utilitários de Teste
 
 <Find />
 
