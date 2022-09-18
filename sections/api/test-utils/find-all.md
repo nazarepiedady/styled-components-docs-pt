@@ -1,6 +1,6 @@
 ### `findAll` | v3
 
-A convenience method to find all instances of a styled component's rendered DOM node within a given DOM root.
+Um método de conveniência para encontrar todas as instâncias de um nó de DOM interpretado do componente estilizado dentro de uma dada raiz de DOM.
 
 ```js
 import styled from 'styled-components'
@@ -11,7 +11,7 @@ const Foo = styled.div`
 `
 
 /**
- * Somewhere in your app:
+ * Em algum na tua aplicação:
  *
  * ReactDOM.render(
  *   <main>
@@ -21,6 +21,6 @@ const Foo = styled.div`
  * );
  */
 
-// retrieves a NodeList of instances of "Foo" in the body (querySelectorAll under the hood)
+// recupera uma "NodeList" de instâncias de "Foo" no corpo (uma `querySelectorAll` nos bastidores)
 findAll(document.body, Foo) // NodeList<HTMLDivElement> | null
 ```
