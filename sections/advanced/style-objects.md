@@ -1,16 +1,16 @@
-## Style Objects
+## Objetos de Estilo
 
-styled-components optionally supports writing CSS as JavaScript objects instead of strings. This is particularly useful when you have existing style objects and want to gradually move to styled-components.
+A `styled-components` suporta opcionalmente a escrita de CSS como objetos de JavaScript no lugar de sequências de caracteres. Isto é particularmente útil quando tens objetos de estilo existente e queres movê-los gradualmente para `styled-components`.
 
 ```react
-// Static object
+// Objeto estático
 const Box = styled.div({
   background: 'palevioletred',
   height: '50px',
   width: '50px'
 });
 
-// Adapting based on props
+// Adaptando com base nas propriedades
 const PropsBox = styled.div(props => ({
   background: props.background,
   height: '50px',
