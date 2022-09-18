@@ -1,14 +1,11 @@
-## Security
+## Segurança
 
-Since styled-components allows you to use arbitrary input as interpolations, you must be
-careful to sanitize that input. Using user input as styles can lead to any CSS being evaluated in the user's
-browser that an attacker can place in your application.
+Já que a `styled-components` permite-te utilizar entrada arbitrária como interpolações, deves ser cuidadoso para desinfetar aquela entrada. Utilizando a entrada do utilizador como estilos pode levar qualquer CSS a ser avaliado no navegador do utilizador que um atacante pode colocar na tua aplicação.
 
-This example shows how bad user input can even lead to API endpoints being called on a user's
-behalf.
+Este exemplo mostra como uma entrada de utilizador nociva pode até levar os destinos de API serem chamado em nome de um utilizador.
 
 ```jsx
-// Oh no! The user has given us a bad URL!
+// Oh não! O utilizador deu-nos uma URL nociva!
 const userInput = '/api/withdraw-funds'
 
 const ArbitraryComponent = styled.div`
@@ -17,7 +14,6 @@ const ArbitraryComponent = styled.div`
 `
 ```
 
-Be very careful! This is obviously a made-up example, but CSS injection can be unobvious and
-have bad repercussions. Some IE versions even execute arbitrary JavaScript within url declarations.
+Seja muito cuidadoso! Isto é obviamente um exemplo inventado, mas injeção de CSS podem não ser óbvio e ter repercussões nocivas. Algumas versões de Internet Explorer até executam JavaScript arbitrário dentro de declarações de URL.
 
-There is an upcoming standard to sanitize CSS from JavaScript, [`CSS.escape`](https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape). It's not very well supported across browsers yet, so we recommend using the [polyfill by Mathias Bynens](https://github.com/mathiasbynens/CSS.escape) in your app.
+Há um padrão chegando para desinfetar CSS a partir da JavaScript, [`CSS.escape`](https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape). Isto ainda não é muito bem suportada entre os navegadores, então recomendamos a utilização da ["polyfill" criada por Mathias Bynens](https://github.com/mathiasbynens/CSS.escape) na tua aplicação.
