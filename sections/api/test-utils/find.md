@@ -1,6 +1,6 @@
 ### `find` | v3
 
-A convenience method to find a single instance of a styled component's rendered DOM node within a given DOM root.
+Um método de conveniência para encontrar uma única instância de um nó de DOM interpretado do componente estilizado dentro de uma dada raiz de DOM.
 
 ```js
 import styled from 'styled-components'
@@ -11,7 +11,7 @@ const Foo = styled.div`
 `
 
 /**
- * Somewhere in your app:
+ * Em algum na tua aplicação:
  *
  * ReactDOM.render(
  *   <main>
@@ -20,6 +20,6 @@ const Foo = styled.div`
  * );
  */
 
-// retrieves the first instance of "Foo" in the body (querySelector under the hood)
+// recupera a primeira instância de "Foo" no corpo (um `querySelector` nos bastidores)
 find(document.body, Foo) // HTMLDivElement | null
 ```
