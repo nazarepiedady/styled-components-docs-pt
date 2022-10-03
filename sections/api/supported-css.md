@@ -1,35 +1,34 @@
-## Supported CSS
+## CSS Suportado
 
-Within a styled component, we support all of CSS plus nesting. Since we generate an
-actual stylesheet and not inline styles, whatever works in CSS works in styled-components!
+Dentro de um componente estilizado, suportamos todas as CSS mais o encaixamento. Uma vez que geramos uma folha de estilo e não estilos em linha, tudo aquilo que funciona na CSS funciona nos componentes estilizados!
 
 ```react
 const Example = styled.div`
-  /* all declarations will be prefixed */
+  /* todas as declarações serão prefixadas */
   padding: 2em 1em;
   background: papayawhip;
 
-  /* pseudo selectors work as well */
+  /* Os pseudo seletores também funcionam */
   &:hover {
     background: palevioletred;
   }
 
-  /* media queries are no problem */
+  /* As consultas de media não são problema */
   @media (max-width: 600px) {
     background: tomato;
 
-    /* nested rules work as expected */
+    /* As regras encaixadas funcionam como esperado */
     &:hover {
       background: yellow;
     }
   }
 
   > p {
-    /* descendant-selectors work as well, but are more of an escape hatch */
+    /* os seletores de descendente também funcionam, mas são mais uma escotilha de fuga */
     text-decoration: underline;
   }
 
-  /* Contextual selectors work as well */
+  /* Os seletores contextuais também funcionam */
   html.test & {
     display: none;
   }
@@ -42,5 +41,4 @@ render(
 );
 ```
 
-Ampersands (`&`) get replaced by our generated, unique classname for that styled
-component, making it easy to have complex logic.
+Os "e" comercial (`&`) são substituídos pelos nossos nomes de classes únicos gerados para aquele componente estilizado, tornando-o fácil de ter lógica complexa.
