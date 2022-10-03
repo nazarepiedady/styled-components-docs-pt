@@ -1,25 +1,23 @@
 ## Flow
 
-styled-components has first-class [Flow](https://flowtype.org) support to help
-you find typing errors while using our public API.
+Os componentes estilizados possuem suporte de primeira classe para [Flow](https://flowtype.org) para ajudar-te a encontrar erros de tipagem enquanto estiveres utilizando a nossa API publica.
 
-To use Flow with the public api of styled-components we recommend that you use the library definition in `flow-typed`.
-To install it you can use the `flow-typed` cli or download it manually from the git repository and store it in
-a `flow-typed/` folder in the same directory with your `flowconfig`.
+Para utilizar Flow com a API publica dos componentes estilizados recomendamos que utilizes a definição de biblioteca em `flow-typed`.
 
-### Installing the definitions
+Para instalá-la tu podes utilizar a interface de linha de comando de `flow-typed` ou descarregá-la manualmente a partir do repositório de git e guardá-la em uma pasta `flow-typed` no mesmo diretório com o teu `flowconfig`.
+
+### Instalando as definições
 
 ```
-npm i -g flow-typed # if you do not already have flow-typed
+npm i -g flow-typed # caso ainda não tiveres `flow-typed` instalado
 flow-typed install styled-components@<version>
 ```
 
-> If you are on npm >= 5.2 you could simply use [npx](https://github.com/zkat/npx)
+> Se estiveres utilizando uma versão do npm igual ou superior a 5.2, podes simplesmente utilizar [npx](https://github.com/zkat/npx).
 
-### Ignore styled-components source
+### Ignorar a fonte de `styled-components`
 
-You should add the following lines to your `.flowconfig`, if you run into Flow errors, coming from the styled-components
-package in your `node_modules` directory.
+Tu podes adicionar as seguintes linhas ao teu ficheiro `.flowconfig`, se tiveres erros de Flow, vindo do pacote `styled-components` dentro do teu diretório `node_modules`.
 
 ```
 [ignore]
