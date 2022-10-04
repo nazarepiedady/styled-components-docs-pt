@@ -53,11 +53,11 @@ const Input = styled.input.attrs(props => ({
   padding: ${props => props.size};
 `;
 
-// Os atributos do `Input` serão aplicados primeiro, e depois este objeto de atributos
+// Os atributos do "Input" serão aplicados primeiro, e depois este objeto de atributos
 const PasswordInput = styled(Input).attrs({
   type: "password",
 })`
-  // da mesma maneira, a borda irá sobrepor a borda do `Input`
+  // da mesma maneira, a borda irá sobrepor a borda do "Input"
   border: 2px solid aqua;
 `;
 
@@ -65,7 +65,7 @@ render(
   <div>
     <Input placeholder="A bigger text input" size="2em" />
     <br />
-    {/* Repare que ainda podemos utilizar o atributo `size` de `Input` */}
+    {/* Repare que ainda podemos utilizar o atributo "size" de "Input" */}
     <PasswordInput placeholder="A bigger password input" size="2em" />
   </div>
 );
