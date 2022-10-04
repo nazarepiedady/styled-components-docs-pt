@@ -3,21 +3,15 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `StyledComponent`
 
-A styled React component. This is returned when you
-call `styled.tagname` or `styled(Component)` with styles.
+Um componente de React estilizado. Isto é retornado quando chamas `styled.tagname` ou `styled(Component)` com estilos.
 
-This component can take any prop. It passes it on to the HTML node if it's a valid attribute,
-otherwise it only passes it into interpolated functions. (see [Tagged Template Literal](/docs/advanced#tagged-template-literals))
+Este componente pode receber qualquer propriedade. Ele passa-a sobre o nó de HTML se for um atributo válido, de outro modo só passa-a para funções interpoladas. (Consulte [Literal de Modelo Marcado](/docs/advanced#literais-de-modelo-marcado))
 
-You can pass an arbitrary classname to a styled component without problem and it will be applied
-next to the styles defined by the styled call.
-(e.g. `<MyStyledComp className="bootstrap__btn" />`)
+Tu podes passar um nome de classe arbitrário para um componente estilizado sem problema e ele será aplicado depois aos estilos definidos pela chamada estilizada. (Por exemplo, `<MyStyledComp className="bootstrap__btn" />`)
 
 #### .attrs
 
-This is a chainable method that attaches some props to a styled component.
-The first and only argument is an object that will be merged into the rest of the
-component's props. The `attrs` object accepts the following values:
+Isto é um método encadeável que atribuí algumas propriedades à um componente estilizado. O primeiro e único argumento é um objeto que será combinado com o resto das propriedades do componente. O objeto `attrs` aceita os seguintes valores:
 
 <Table head={['Values', 'Description']}>
   <Row>
@@ -25,8 +19,7 @@ component's props. The `attrs` object accepts the following values:
       <Code>Prop Value</Code>
     </Column>
     <Column>
-      These can be of any type, except functions. They'll stay static and
-      will be merged into the existing component props.
+      Estes podem ser de qualquer tipo, exceto funções. Continuarão estáticos e serão combinados com as propriedades do componente existente.
     </Column>
   </Row>
 
@@ -35,14 +28,12 @@ component's props. The `attrs` object accepts the following values:
       <Code>Prop Factory</Code>
     </Column>
     <Column>
-      A function that receives the props that are passed into the component
-      and computes a value, that is then going to be merged into the
-      existing component props.
+      Uma função que recebe as propriedades que são passadas para o componente e calcula um valor, que é depois será combinada com as propriedades do componente existente.
     </Column>
   </Row>
 </Table>
 
-Returns another `StyledComponent`.
+Retorna um outro `StyledComponent`.
 
 ```react
 // import styled from 'styled-components'
@@ -72,28 +63,28 @@ render(
 ```
 
 Learn more about this constructor in the [Attaching Additional Props](/docs/basics#attaching-additional-props) section.
+Aprenda mais sobre este construtor na secção [Atribuindo Propriedades Adicionais](/docs/basics#atribuindo-propriedades-adicionais).
 
 #### .withComponent
 
-This is a method that creates a new `StyledComponent` with a different tag or component
-applied to it, but all the same rules of the one it's called on.
+Isto é um método que cria um novo `StyledComponent` com um marcador diferente ou componente aplicado a ele, mas todas as mesmas regras de um é chamada sobre outra.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
     <Column>
       1. <Code>component</Code> / <Code>tagname</Code>
     </Column>
-    <Column>Either a valid react component or a tagname like `'div'`.</Column>
+    <Column>Pode ser tanto um componente de react válido ou um nome de marcador como `'div'`</Column>
   </Row>
 </Table>
 
-Returns a new `StyledComponent` with the new tag / component being applied when it's used.
+Retorna um novo `StyledComponent` com um novo marcador ou um componente sendo aplicado quando é utilizado.
 
-> As of styled-components v4 the `withComponent` API is now a candidate for deprecation. In all likelihood, you probably want to use the new [`"as"` prop](#as-polymorphic-prop) to simply switch what element/component being rendered since the `withComponent` API is destructive toward styles if the lowest-wrapped component is a `StyledComponent`.
+> Desde `styled-components` v4 a API `withComponent` é agora uma candidata para depreciação. O mais provável é que, provavelmente queiras utilizar a nova [propriedade `"as"`](#propriedade-polimórfica-as) para simplesmente mudar o elemento ou componente sendo interpretado visto que a API `withComponent` é destrutiva para os estilos se o componente envolvido inferior for um `StyledComponent`.
 
-#### `"as"` polymorphic prop | v4
+#### propriedade polimórfica `"as"` | v4
 
-If you want to keep all the styling you've applied to a component but just switch out what's being ultimately rendered (be it a different HTML tag or a different custom component), you can use the `"as"` prop to do this at runtime.
+Se quiseres manter todos os estilos que tens aplicado a um componente mas só mudar o que está sendo finalmente interpretado (seja ele um marcador de HTML diferente ou um componente personalizado diferente), podes utilizar a propriedade `"as"` para fazer isto em tempo de execução.
 
 ```react
 // import styled from "styled-components";
@@ -112,17 +103,17 @@ render(
 )
 ```
 
-This sort of thing is very useful in use cases like a navigation bar where some of the items should be links and some just buttons, but all be styled the same way.
+Este tipo de coisa é muito útil em casos de uso como uma barra de navegação onde alguns dos itens devem ser ligações e alguns apenas botões, mas todos são estilizados da mesma maneira.
 
-#### "forwardedAs" prop | v4.3
+#### propriedade "forwardedAs" | v4.3
 
-If you choose to wrap another component with the `styled()` HOC that also accepts an `"as"` prop, use `"forwardedAs"` to pass along the desired prop to the wrapped component.
+Se escolheres envolver um outro componente com o HOC de `styled()` que também aceita uma propriedade `"as"`, utilize `"forwardedAs"` para passar juntamente com a propriedade desejada para o componente envolvido.
 
-#### Transient props | v5.1
+#### propriedades transitórias | v5.1
 
-If you want to prevent props meant to be consumed by styled components from being passed to the underlying React node or rendered to the DOM element, you can prefix the prop name with a dollar sign (`$`), turning it into a transient prop.
+Se quiseres prevenir que as propriedades destinadas a serem consumidas pelos componentes estilizados de serem passadas para o nó de React subjacente ou interpretados para o elemento de DOM, podes prefixar o nome de propriedade com um sinal de dólar (`$`), tornando-a em uma propriedade transitória.
 
-In this example, `$draggable` isn't rendered to the DOM like `draggable` is.
+Neste exemplo, `$draggable` não é interpretado para o DOM como `draggable` é.
 
 ```react
 const Comp = styled.div`
@@ -139,9 +130,9 @@ render(
 
 #### shouldForwardProp | v5.1
 
-This is a more dynamic, granular filtering mechanism than transient props. It's handy in situations where multiple higher-order components are being composed together and happen to share the same prop name.`shouldForwardProp` works much like the predicate callback of `Array.filter`. A prop that fails the test isn't passed down to underlying components, just like a transient prop.
+Isto é um mecanismo de filtragem mais dinâmico e granular do que as propriedades transitórias. É prático em situações onde vários componentes ordem mais elevada estão sendo compostos juntos e parecem partilhar o mesmo nome de propriedade. `shouldForwardProp` funciona muito como a resposta predicada de `Array.filter`. Uma propriedade que falha o teste não é passada para baixo para os componentes subjacentes, tal como uma propriedade transitória.
 
-Keep in mind that, as in this example, other chainable methods should always be executed after `.withConfig`.
+Lembra-te de que, como neste exemplo, outros métodos encadeiáveis devem sempre ser executados depois de `.withConfig`.
 
 ```react
 const Comp = styled('div').withConfig({
@@ -162,4 +153,4 @@ render(
 );
 ```
 
-Optionally, `shouldForwardProp` can take a second parameter that provides access to the default validator function. This function can be used as a fallback, and of course, it also works like a predicate, filtering based on known HTML attributes.
+Opcionalmente, `shouldForwardProp` pode receber um segundo parâmetro que provê acesso à função de validação padrão. Esta função pode ser utilizada como um retorno, e claro, ela também funciona como um predicado, filtrando com base nos atributos de HTML conhecidos.
