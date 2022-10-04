@@ -3,9 +3,7 @@ import Code from 'components/Code'
 
 ### `ThemeProvider`
 
-A helper component for theming. Injects the theme into all styled components anywhere
-beneath it in the component tree, via the context API.
-Check the section on [Theming](/docs/advanced#theming).
+Um componente auxiliar para criação de temas. Injeta o tema em todos componentes estilizados em qualquer lugar abaixo dele na árvore de componente, através da API de contexto. Consulte a secção sobre [Criação de Temas](/docs/advanced#criação-de-temas).
 
 <Table head={['Props', 'Description']}>
   <Row>
@@ -13,8 +11,7 @@ Check the section on [Theming](/docs/advanced#theming).
       <Code>theme</Code>
     </Column>
     <Column>
-      An object that will be injected as <Code>theme</Code> into all
-      interpolations in styled components beneath the provider.
+      Um objeto que será injetado como <Code>theme</Code> em todas as interpolações nos componentes estilizados abaixo do provedor.
     </Column>
   </Row>
 </Table>
