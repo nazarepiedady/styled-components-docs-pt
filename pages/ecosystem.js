@@ -34,7 +34,7 @@ const Ecosystem = ({ readme, sidebarPages }) => (
 
   ### Contribuir
   
-  Se souberes quaisquer projetos construídos com os componentes estilizados, contribuições e sugestão são sempre bem-vindas!
+  Se souberes de quaisquer projetos construídos com os componentes estilizados, contribuições e sugestões são sempre bem-vindos!
   Por favor leia primeiro as [diretrizes de contribuição](https://github.com/styled-components/awesome-styled-components/blob/master/contributing.md) e submeta um pedido para empurrar mudanças (PR).
         `}</Markdown>
     )}
