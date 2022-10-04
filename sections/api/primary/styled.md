@@ -3,8 +3,7 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `styled`
 
-Isto é a exportação padrão.
-Isto é uma fábrica de baixo nível que utilizamos para criar os métodos auxiliares de `styled.tagname`.
+Isto é a exportação padrão. Isto é uma fábrica de baixo nível que utilizamos para criar os métodos auxiliares de `styled.tagname`.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
