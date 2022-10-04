@@ -3,8 +3,8 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `styled`
 
-This is the default export.
-This is a low-level factory we use to create the `styled.tagname` helper methods.
+Isto é a exportação padrão.
+Isto é uma fábrica de baixo nível que utilizamos para criar os métodos auxiliares de `styled.tagname`.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
@@ -17,7 +17,7 @@ This is a low-level factory we use to create the `styled.tagname` helper methods
   </Row>
 </Table>
 
-Returns a function that accepts a tagged template literal and turns it into a `StyledComponent`.
+Retorna uma função que aceita um literal de modelo marcado e transforma-o em um `StyledComponent`.
 
 ```react
 // import styled from 'styled-components'
@@ -42,4 +42,4 @@ render(
 )
 ```
 
-You can see this method being introduced in the [Getting started](/docs/basics#getting-started) section.
+Tu podes ver este método sendo introduzido na secção [Começar](/docs/basics#começar).
