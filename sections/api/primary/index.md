@@ -4,7 +4,7 @@ import StyledComponent from './styled-component.md'
 import ThemeProvider from './theme-provider.md'
 import CssProp from './css-prop.md'
 
-## Primário
+## Prioritário
 
 <Styled />
 
