@@ -1,8 +1,8 @@
-### `css` prop | v4
+### propriedade `css` | v4
 
-Sometimes you don't want to create an extra component just to apply a bit of styling. The `css` prop is a convenient way to iterate on your components without settling on fixed component boundaries yet. It works on both normal HTML tags as well as components, and supports everything any styled component supports, including adapting based on props, theming and custom components.
+Algumas vez não queres criar um componente adicional só para aplicar um pouco de estilização. A propriedade `css` é uma maneira conveniente de iterar sobre os teus componentes sem ainda estabelecerem-se limites de componente fixo. Ela funciona sobre ambos marcadores de HTML normais bem como sobre componentes, e suporta tudo que qualquer componente estilizado suporta, incluindo adaptação baseada nas propriedades, criação de temas e componentes personalizados.
 
-> To enable support for the `css` prop you have to use the [Babel plugin](/docs/tooling#babel-plugin).
+> Para ativar o suporte para a propriedade `css` tens que utilizar a [extensão Babel](/docs/tooling#extensão-babel).
 
 ```jsx
 <div
@@ -16,7 +16,7 @@ Sometimes you don't want to create an extra component just to apply a bit of sty
 />
 ```
 
-Under the hood, the Babel plugin turns any element with a `css` prop into a styled component. For example, the above code becomes:
+Nos bastidores, a extensão Babel transforma qualquer elemento com a propriedade `css` em um componente estilizado. Por exemplo, o código acima tornar-se:
 
 ```javascript
 import styled from 'styled-components';
@@ -34,11 +34,11 @@ const StyledButton = styled(Button)`
 <StyledButton />
 ```
 
-Note that you don't even have to add the import, the Babel plugin does that automatically! (unless you're using the Babel macro, see below)
+Nota que não tens adicionar a importação, a extensão Babel faz isto automaticamente! (a menos que estejas utilizando o macro de Babel, veja abaixo)
 
-#### Usage with the Babel macro
+#### Utilização com a macro de Babel
 
-You can use the [Babel macro](/docs/tooling#babel-macro) to make this work in `create-react-app`. Unfortunately, Babel macros only run when imported so **the import can not be added automatically.** The above code works perfectly if you add the import to the macro manually:
+Tu podes utilizar a [macro de Babel](/docs/tooling#macro-de-babel) para fazer este trabalho no `create-react-app`. Infelizmente, as macros de Babel só executam quando importadas então **a importação não pode ser adicionada automaticamente**. O código acima funciona perfeitamente se adicionares a importação para macro manualmente:
 
 ```jsx
 import styled from 'styled-components/macro'
@@ -54,11 +54,12 @@ import styled from 'styled-components/macro'
 />
 ```
 
-#### Usage with TypeScript
+#### Utilização com TypeScript
 
-To prevent TypeScript errors on the `css` prop on arbitrary elements, install `@types/styled-components` and add the following import once in your project:
+Para prevenir erros de TypeScript sobre a propriedade `css` sobre elementos arbitrários, instale `@types/styled-components` e adicione a seguinte importação uma vez no teu projeto:
 
 ```ts
-import {} from 'styled-components/cssprop'
+import {} from 'styled-components/cssprop';
 ```
-See <https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245#issuecomment-446011384> for more information.
+
+Consulte <https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31245#issuecomment-446011384> para mais informações.
