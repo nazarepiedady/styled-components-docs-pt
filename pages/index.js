@@ -31,7 +31,7 @@ const SupportingTagline = styled.h2`
 
 const headerCode = `
 const Button = styled.a\`
-  /* This renders the buttons above... Edit me! */
+  /* Isto interpreta o botão acima... Edita-me! */
   display: inline-block;
   border-radius: 3px;
   padding: 0.5rem 0;
@@ -41,8 +41,8 @@ const Button = styled.a\`
   color: white;
   border: 2px solid white;
 
-  /* The GitHub button is a primary button
-   * edit this to target it specifically! */
+  /* O botão de GitHub é um botão primário
+   * edite isto mirá-lo especificamente! */
   \${props => props.primary && css\`
     background: white;
     color: black;
