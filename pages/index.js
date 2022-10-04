@@ -200,7 +200,7 @@ class Index extends PureComponent {
               <Logo />
 
               <Title>
-                <Tagline>Primitivos visuais para a época de componente.</Tagline>
+                <Tagline>Visuais originais para a era de componente.</Tagline>
                 <SupportingTagline>
                   Utilize os melhores pedaços de ES6 e CSS para estilizar as tuas aplicações sem pressão 💅🏾
                 </SupportingTagline>
