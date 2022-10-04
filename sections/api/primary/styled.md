@@ -12,7 +12,7 @@ Isto é uma fábrica de baixo nível que utilizamos para criar os métodos auxil
       1. <Code>component</Code> / <Code>tagname</Code>
     </Column>
     <Column>
-      Either a valid react component or a tagname like <Code>'div'</Code>.
+      Pode ser tanto um componente de react válido ou um nome de marcador como <Code>'div'</Code>.
     </Column>
   </Row>
 </Table>
