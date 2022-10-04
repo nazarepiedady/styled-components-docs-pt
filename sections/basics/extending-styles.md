@@ -1,11 +1,11 @@
-## Extending Styles
+## Estendendo os Estilos
 
-Quite frequently you might want to use a component, but change it slightly for a single case. Now, you could pass in an interpolated function and change them based on some props, but that's quite a lot of effort for overriding the styles once.
+Muito podes frequentemente querer utilizar um componente, porém mudá-lo ligeiramente para um caso singular. Agora, poderias passar uma função interpolada e mudá-los com base em algumas propriedades, mas é muito esforço para sobrepor os estilos de uma vez.
 
-To easily make a new component that inherits the styling of another, just wrap it in the `styled()` constructor. Here we use the button from the last section and create a special one, extending it with some color-related styling:
+Para facilmente criar um novo componente que herda os estilos de um outro, apenas envolva-o no construtor `styled()`. Cá utilizamos o botão da secção anterior e criamos um botão especial, estendendo-o com algum estilo relacionado de color:
 
 ```react
-// The Button from the last section without the interpolations
+// O `Button` da secção anterior sem as interpolações
 const Button = styled.button`
   color: palevioletred;
   font-size: 1em;
@@ -15,7 +15,7 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-// A new component based on Button, but with some override styles
+// Um novo componente baseado no `Button`, com algumas sobreposições de estilos
 const TomatoButton = styled(Button)`
   color: tomato;
   border-color: tomato;
@@ -29,11 +29,11 @@ render(
 );
 ```
 
-We can see that the new `TomatoButton` still resembles `Button`, while we have only added two new rules.
+Nós podemos ver que o novo `TomatoButton` continua assemelhar-se com `Button`, enquanto só temos adicionado duas regras novas.
 
-In some cases you might want to change which tag or component a styled component renders. This is common when building a navigation bar for example, where there are a mix of anchor links and buttons but they should be styled identically.
+Em alguns casos podes querer mudar qual marcador ou componente um componente estilizado interpreta. Isto é comum quando estás construindo uma barra de navegação por exemplo, onde existem uma mistura de ligações de âncoras e botões mas eles devem ser estilizados identicamente.
 
-For this situation, we have an escape hatch. You can use the [`"as" polymorphic prop`](/docs/api#as-polymorphic-prop) to dynamically swap out the element that receives the styles you wrote:
+Para esta situação, temos uma escotilha de fuga. Tu podes utilizar a [propriedade polimórfica `"as"`](/docs/api#propriedade-polimórfica-as) para trocar dinamicamente o elemento que recebe os estilos que escreveste:
 
 ```react
 const Button = styled.button`
@@ -61,7 +61,7 @@ render(
 );
 ```
 
-This works perfectly fine with custom components too!
+Isto também funciona perfeitamente bem com os componentes personalizados!
 
 ```react
 const Button = styled.button`
@@ -85,4 +85,4 @@ render(
 );
 ```
 
-> If you are still on an older version than v4, you can use the [`.withComponent`](/docs/api#withcomponent) or [`.extend`](/docs/api#deprecated-extend) API's to achieve the same result as with the [`"as" prop`](/docs/api#as-polymorphic-prop), but note that this is discouraged as with v4 [`.extend` was removed](/releases#breaking-changes) and `.withComponent` was marked as a candidate for future deprecation.
+> Se continuas sobre uma versão mais antiga do que v4, podes utilizar as APIs [`.withComponent`](/docs/api#withcomponent) ou [`.extend`](/docs/api#deprecated-extend) para alcançar o mesmo resultado da mesma maneira que com a [propriedade `"as"`](/docs/api#propriedade-polimórfica-as), mas nota que isto é desencorajado visto que na v4 a [`.extend` foi removida](/releases#breaking-changes) e `.withComponent` foi marcado como um candidato para futura depreciação.
