@@ -1,14 +1,19 @@
-## Motivation
+## Motivação
 
-**styled-components is the result of wondering how we could enhance CSS for styling React component systems.** By focusing on a single use case we managed to optimize the experience for developers as well as the output for end users.
+A **`styled-components` é o resultado do pensamento de como poderíamos melhorar a CSS para estilização de sistemas de componente de React**. Focando-se sobre um único caso de uso conseguimos otimizar a experiência para os programadores bem como o resultado para os utilizadores finais.
 
-Apart from the improved experience for developers, styled-components provides:
+Para além da experiência melhorada para os programadores, a `sstyled-components` fornecem:
 
-- **Automatic critical CSS**: styled-components keeps track of which components are rendered on a page and injects their styles and nothing else, fully automatically. Combined with code splitting, this means your users load the least amount of code necessary.
-- **No class name bugs**: styled-components generates unique class names for your styles. You never have to worry about duplication, overlap or misspellings.
-- **Easier deletion of CSS**: it can be hard to know whether a class name is used somewhere in your codebase. styled-components makes it obvious, as every bit of styling is tied to a specific component. If the component is unused (which tooling can detect) and gets deleted, all its styles get deleted with it.
-- **Simple dynamic styling**: adapting the styling of a component based on its props or a global theme is simple and intuitive without having to manually manage dozens of classes.
-- **Painless maintenance**: you never have to hunt across different files to find the styling affecting your component, so maintenance is a piece of cake no matter how big your codebase is.
-- **Automatic vendor prefixing**: write your CSS to the current standard and let styled-components handle the rest.
+- **CSS Crítica Automática**: a `styled-components` continua a rastrear quais componentes são interpretados em uma página e injeta seus estilos e nada mais, completamente e automaticamente. Combinada com a separação de código, isto significa que os utilizadores carregam a menor quantidade de código possível ou necessária.
 
-You get all of these benefits while still writing the CSS you know and love, just bound to individual components.
+- **Sem bugs de nome de classe**: a `styled-components` gera nomes de classe únicos para os teus estilos. Tu nunca tens que preocupar-te a respeito de duplicação, sobreposição ou erros ortográficos.
+
+- **Deteção de CSS mais fácil**: pode ser difícil saber se um nome de classe é utilizado em algum lugar na tua base de código. A `styled-components` torna óbvio, já que todo pedaço de estilo está preso a um componente especifico. Se o componente estiver sem utilizar-se (o que ferramental consegue detetar) é eliminado, e todos os seus estilos são apagados com ele.
+
+- **Estilização dinâmica simples**: a adaptação dos estilos de um componente com base em suas propriedades ou um tema global é simples e intuitiva sem a necessidade de lidar com montes de classes manualmente.
+
+- **Manutenção indolor**: nunca tens que caçar através de ficheiros diferentes para encontrares a estilização que está afetando o teu componente, assim a manutenção é um pedaço de bolo não importa quão grande seja a tua base de código.
+
+- **Prefixação automática**: escreva o teu CSS para padrão atual e deixe a `styled-components` lidar com o resto.
+
+Tu recebes todos estes benefícios enquanto continuas escrevendo a CSS que sabes e amas, só vincule-os a componentes individuais.
