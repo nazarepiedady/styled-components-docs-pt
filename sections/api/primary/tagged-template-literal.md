@@ -3,35 +3,28 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `TaggedTemplateLiteral`
 
-This is what you pass into your styled calls – a tagged template literal.
-This is an ES6 language feature. You can learn more about them in the
-[Tagged Template Literals](/docs/advanced#tagged-template-literals) section.
+Isto é o que passas para as tuas chamadas estilizadas - um literal de modelo marcado. Isto é uma funcionalidade da especificação ECMAScript 6. Tu podes aprender mais a respeito deles na secção [Literais de Modelo Marcado](/docs/advanced#literais-de-modelo-marcado).
 
 <Table head={['Inputs', 'Description']}>
   <Row>
     <Column>
       <Code>Rule</Code>
     </Column>
-    <Column>Any CSS rules (string)</Column>
+    <Column>Quaisquer regras de CSS (como sequências de caracteres)</Column>
   </Row>
   <Row>
     <Column>
       <Code>Interpolation</Code>
     </Column>
     <Column>
-      This can either be a string or a function. Strings are combined with the
-      rules as-is. Functions will receive the styled component's props as the
-      first and only argument.
+      Isto pode ser tanto uma sequência de caracteres ou uma função. As sequências de caracteres são combinadas com as regras como está. As funções receberão as propriedades do componente estilizado como primeiro e único argumento.
     </Column>
   </Row>
 </Table>
 
-Read more about how to adapt styling based on props in the
-[Adapting based on props](/docs/basics#adapting-based-on-props) section.
+Leia mais sobre como adaptar os estilos com base nas propriedades na secção [Adaptando com base nas propriedades](/docs/basics#adaptando-com-base-nas-propriedades).
 
-The properties that are passed into an interpolated function get attached a special
-property, `theme`, which is injected by a higher level `ThemeProvider` component.
-Check the section on [Theming](/docs/advanced#theming) for more information on this.
+As propriedades que são passados para uma função interpolada são atribuídas a uma propriedade especial, `theme`, que é injetada por um componente de alto nível `ThemeProvider`. Consulte a secção sobre a [Criação de Temas](/docs/advanced#criação-de-temas) para mais informações a respeito disto.
 
 ```react
 // import styled from 'styled-components'
@@ -41,10 +34,10 @@ const padding = '3em'
 const Section = styled.section`
   color: white;
 
-  /* Pass variables as inputs */
+  /* Passa as variáveis como entradas */
   padding: ${padding};
 
-  /* Adjust the background from the properties */
+  /* Ajusta o fundo a partir das propriedades */
   background: ${props => props.background};
 `
 
@@ -55,6 +48,4 @@ render(
 )
 ```
 
-You can also return objects from interpolations or input objects directly, and they'll be
-treated as inline styles. However this is highly discouraged, as the CSS syntax has support
-for pseudo selectors, media queries, nesting, etc., which the object syntax doesn't.
+Tu também podes retornar objetos de interpolações ou objetos de entrada diretamente, e serão tratados como estilos em linha. No entanto isto é altamente desencorajado, porque a sintaxe de CSS tem suporte para pseudo seletores, consultas de media, encaixamento, etc., o que a sintaxe de objeto não suporta.
