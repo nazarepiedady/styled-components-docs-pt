@@ -1,4 +1,4 @@
-## Anexando propriedades adicionais | v2
+## Atribuindo propriedades adicionais | v2
 
 Para evitar envolvedores desnecessários que só passam algumas propriedades para o componente interpretado, ou elemento, podes utilizar o [construtor `.attrs`](/docs/api#attrs). Isto permite-te prender propriedades adicionais (ou "atributos") para um componente.
 
@@ -70,4 +70,5 @@ render(
   </div>
 );
 ```
+
 Isto porque `PasswordInput` é de um tipo de senha, mas ainda utiliza o atributo `size` de `Input`.
