@@ -8,7 +8,7 @@ Este componente `button` possui um estado primário que muda a sua cor. Quando d
 
 ```react
 const Button = styled.button`
-  /* Adapta as cores com base na propriedade `primary` */
+  /* Adapta as cores com base na propriedade primária */
   background: ${props => props.primary ? "palevioletred" : "white"};
   color: ${props => props.primary ? "white" : "palevioletred"};
 
