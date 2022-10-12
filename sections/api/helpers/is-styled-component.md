@@ -3,7 +3,7 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `isStyledComponent`
 
-A utility to help identify styled components.
+Um utilitário para ajudar a identificar componentes estilizados.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
@@ -11,22 +11,19 @@ A utility to help identify styled components.
       1. <Code>Function</Code>
     </Column>
     <Column>
-      Any function expected to possibly be a styled component or React component
-      wrapped in a styled component
+      Qualquer função esperada que possivelmente seja um componente estilizado ou componente de React envolvido em um componente estilizado.
     </Column>
   </Row>
 </Table>
 
-Returns true if the passed function is a valid styled components-wrapped component class. It can be useful for determining if a component needs to be wrapped such that it can be used as a component selector:
+Retorna verdadeiro se a função passada for uma classe válida de componente de componentes estilizados envolvidos. Pode ser útil para a determinar se um componente precisa ser envolvido tanto que pode ser utilizada como um seletor de componente:
 
 ```jsx
-import React from 'react'
-import styled, { isStyledComponent } from 'styled-components'
-import MaybeStyledComponent from './somewhere-else'
+import React from 'react';
+import styled, { isStyledComponent } from 'styled-components';
+import MaybeStyledComponent from './somewhere-else';
 
-let TargetedComponent = isStyledComponent(MaybeStyledComponent)
-  ? MaybeStyledComponent
-  : styled(MaybeStyledComponent)``
+let TargetedComponent = isStyledComponent(MaybeStyledComponent) ? MaybeStyledComponent : styled(MaybeStyledComponent)``;
 
 const ParentComponent = styled.div`
   color: cornflowerblue;
@@ -34,5 +31,5 @@ const ParentComponent = styled.div`
   ${TargetedComponent} {
     color: tomato;
   }
-`
+`;
 ```
