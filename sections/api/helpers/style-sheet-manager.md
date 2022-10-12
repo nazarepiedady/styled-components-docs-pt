@@ -3,7 +3,7 @@ import Code from 'components/Code'
 
 ### `StyleSheetManager`
 
-A helper component for modifying how your styles are processed. For a given subtree involving styled-components, you can customize various behaviors like how the CSS runtime processor (stylis) handles styles via userland plugins and option overrides.
+Um componente auxiliar para modificação de como os teus estilos são processados. Para uma dada sub-árvore envolvendo os componentes estilizados, podes personalizar vários comportamentos tais como o processador (stylis) de tempo de execução de CSS manipula os estilos através extensões de `userland` e sobreposição de opção.
 
 <Table head={['Props', 'Description']}>
   <Row>
@@ -11,7 +11,7 @@ A helper component for modifying how your styles are processed. For a given subt
       <Code>disableCSSOMInjection (v5+)</Code>
     </Column>
     <Column>
-      Switches to the slower text node-based CSS injection system for adding styles to the DOM. Useful for integrating with third party tools that haven't been upgraded to consume styles from the CSSOM APIs.
+      Alterna para o sistema de injeção de CSS baseada em nó de texto mais lento para adição de estilos para o DOM. Útil para a integração com ferramentas de terceiros que foram atualizadas para consumirem estilos a partir das APIs da CSSOM.
     </Column>
   </Row>
 
@@ -19,7 +19,9 @@ A helper component for modifying how your styles are processed. For a given subt
   <Column>
     <Code>disableVendorPrefixes (v5+)</Code>
   </Column>
-  <Column>Opts the given subtree out of adding legacy CSS properties for rendered components.</Column>
+  <Column>
+    Optar que a dada sub-árvore deixe de adicionar as propriedades de CSS legadas para componentes interpretados.
+  </Column>
 </Row>
 
 <Row>
@@ -27,7 +29,7 @@ A helper component for modifying how your styles are processed. For a given subt
     <Code>sheet</Code>
   </Column>
   <Column>
-    <em>Thar be dragons ahead.</em> Create and provide your own StyleSheet if necessary for advanced SSR scenarios.
+    Cria e fornece a tua própria folha de estilo se necessário para cenários de SSR avançados.
   </Column>
 </Row>
 
@@ -36,11 +38,9 @@ A helper component for modifying how your styles are processed. For a given subt
     <Code>stylisPlugins (v5+)</Code>
   </Column>
   <Column>
-    An array of plugins to be run by stylis during compilation. Check out{' '}
-    <a href="https://www.npmjs.com/search?q=keywords%3Astylis" target="_blank">
-      what's available on npm
-    </a>
-    .
+    Um arranjo de extensões à serem executadas pelo stylis durante a compilação. Consulte{' '}<a href="https://www.npmjs.com/search?q=keywords%3Astylis" target="_blank">
+      que está disponível na npm
+    </a>.
   </Column>
 </Row>
 
@@ -49,12 +49,12 @@ A helper component for modifying how your styles are processed. For a given subt
       <Code>target</Code>
     </Column>
     <Column>
-      <em>Thar be dragons ahead.</em> Provide an alternate DOM node to inject styles info.
+      Fornece um nó de DOM alternativo para injetar informações de estilos.
     </Column>
   </Row>
 </Table>
 
-For example if your app runs only in modern browsers, you may want to disable vendor prefixing for your styles:
+Por exemplo se a tua aplicação executa apenas em navegadores modernos, talvez queiras desativar a prefixação ambulante para os teus estilos:
 
 ```react
 // import styled, { StyleSheetManager } from 'styled-components'
@@ -71,7 +71,7 @@ render(
 )
 ```
 
-Another example would be enabling right-to-left translation for your styles via the userland `stylis-plugin-rtl` plugin:
+Um outro exemplo seria a ativação da tradução "direita-para-esquerda" para os teus estilos através da extensão `stylis-plugin-rtl` da `userland`:
 
 ```react
 // import styled, { StyleSheetManager } from 'styled-components'
