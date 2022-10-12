@@ -3,8 +3,7 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `withTheme`
 
-This is a higher order component factory to get the current theme from a `ThemeProvider` and
-pass it to your component as a `theme` prop.
+Isto é uma fábrica de componente de ordem superior para receber o tema atual de um `ThemeProvider` e passá-lo para o teu componente como uma propriedade `theme`.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
@@ -12,25 +11,25 @@ pass it to your component as a `theme` prop.
       1. <Code>Component</Code>
     </Column>
     <Column>
-      Any valid React component that can handle a <Code>theme</Code> prop.
+      Qualquer componente de React válido que pode manipular uma propriedade <Code>theme</Code>.
     </Column>
   </Row>
 </Table>
 
-Returns the passed component inside a wrapper (higher order component).
-The passed component will receive a `theme` prop with the current theme object.
+Retorna o componente passado dentro de um embrulhador (componente de ordem superior).
+O componente passado receberá uma propriedade `theme` com o objeto de tema atual.
 
 ```jsx
-import { withTheme } from 'styled-components'
+import { withTheme } from 'styled-components';
 
 class MyComponent extends React.Component {
   render() {
-    console.log('Current theme: ', this.props.theme)
+    console.log('Current theme: ', this.props.theme);
     // ...
   }
 }
 
-export default withTheme(MyComponent)
+export default withTheme(MyComponent);
 ```
 
-> All styled components [automatically receive the theme as a prop](/docs/advanced#theming), so this is only necessary if you wish to access the theme for other reasons.
+> Todos componentes estilizados [recebem automaticamente o tema como uma propriedade](/docs/advanced#theming), assim isto só é necessário se desejares acessar o tema por outras razões.
