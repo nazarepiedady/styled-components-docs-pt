@@ -7,7 +7,7 @@ import ThemeConsumer from './theme-consumer.md'
 import StyleSheetManager from './style-sheet-manager.md'
 import UseTheme from './use-theme.md'
 
-## Helpers
+## Auxiliares
 
 <CreateGlobalStyle />
 
