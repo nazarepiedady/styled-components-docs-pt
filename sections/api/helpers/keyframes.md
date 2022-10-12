@@ -3,23 +3,23 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `keyframes` | web-only
 
-A helper method to create keyframes for animations.
+Um método auxiliar para criar `keyframes` para animações.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
     <Column>
       1. <Code>TaggedTemplateLiteral</Code>
     </Column>
-    <Column>A tagged template literal with your keyframes inside.</Column>
+    <Column>Um literal de modelo marcado com o teu `keyframes` dentro.</Column>
   </Row>
 </Table>
 
-Returns a Keyframes model, to be used in your animation declarations. You can use the `getName()` API on the returned model if you wish to obtain the generated animation name.
+Retorna um modelo de `Keyframes`, para ser utilizado nas tuas declarações de animação. Tu podes utilizar a API `getName()` sobre o modelo retornado se desejares obter o nome da animação gerada.
 
-> In styled-components v3 and below, the `keyframes` helper directly returned the animation name instead of an object with the `getName` method.
+> Da versão 3 para baixo da `styled-components`, o auxiliar `keyframes` retornava diretamente o nome da animação no lugar de um objeto com o método `getName`.
 
 ```jsx
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
   0% {
@@ -28,17 +28,17 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 const FadeInButton = styled.button`
   animation: 1s ${fadeIn} ease-out;
-`
+`;
 ```
 
-If you are composing your style rule as a partial, make sure to use the `css` helper.
+Se estiveres compondo a tua regra de estilo como um parcial, certifica-te de utilizar o auxiliar `css`.
 
 ```jsx
-import styled, { css, keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components';
 
 const pulse = keyframes`
   0% {
@@ -47,16 +47,16 @@ const pulse = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
-const animation = props =>
+const animation = (props) =>
   css`
     ${pulse} ${props.animationLength} infinite alternate;
-  `
+  `;
 
 const PulseButton = styled.button`
   animation: ${animation};
-`
+`;
 ```
 
-You can learn more about using animations with styled-components in the [Animations](/docs/basics#animations) section.
+Tu podes aprender mais utilizando animações com a `styled-components` na secção de [Animações](/docs/basics#animations).
