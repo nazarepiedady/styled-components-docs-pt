@@ -1,33 +1,32 @@
 import Code from 'components/Code'
 import Table, { Row, Column } from 'components/Table'
 
-### _[Deprecated]_ `.extend`
+### _[Depreciada]_ `.extend`
 
-> The `.extend` API was removed in styled-components v4. Use `styled(StyledComponent)` instead. For more information, see: <https://github.com/styled-components/styled-components/issues/1546>
+> A API `.extend` foi removida da `styled-components` v4. Utilize a `styled(StyledComponent)` no lugar dela. Para mais informações, consulte: <https://github.com/styled-components/styled-components/issues/1546>
 
-This is a method that creates a new `StyledComponent` and extends its rules.
+Isto é um método que cria um novo `StyledComponent` e estende suas regras.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
     <Column>
       1. <Code>TaggedTemplateLiteral</Code>
     </Column>
-    <Column>A tagged template literal with your CSS and interpolations.</Column>
+    <Column>Um literal de modelo marcado com a tua CSS e interpolações.</Column>
   </Row>
 </Table>
 
 ```jsx
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Component = styled.div`
   color: red;
-`
+`;
 
 const Component2 = Component.extend`
   background: white;
   color: blue;
-`
+`;
 ```
 
-Returns a new `StyledComponent` with the new rules merged into the ones of the component
-this method was called on.
+Retorna um novo `StyledComponent` com as novas regras combinadas com aquelas do componente sobre o qual este método foi chamado.
