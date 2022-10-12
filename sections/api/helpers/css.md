@@ -3,35 +3,32 @@ import Table, { Row, Column } from 'components/Table'
 
 ### `css`
 
-A helper function to generate CSS from a template literal with interpolations. You need to use this if you return a
-template literal with functions inside an interpolation due to how tagged template literals work in JavaScript.
+Uma função auxiliar para gerar CSS a partir de um literal de modelo com interpolações. Tu precisas utilizar isto caso retornares um literal de modelo com funções dentro de uma interpolação por cause de como literais de modelo marcado funcionam na JavaScript.
 
-If you're interpolating a string you do not need to use this, only if you're interpolating a function.
+Se estiveres interpolando uma sequência de caracteres não precisas utilizar isto, só se estiveres interpolando uma função.
 
 <Table head={['Arguments', 'Description']}>
   <Row>
     <Column>
       1. <Code>TaggedTemplateLiteral</Code>
     </Column>
-    <Column>A tagged template literal with your CSS and interpolations.</Column>
+    <Column>Um literal de modelo marcado com a tua CSS e interpolações.</Column>
   </Row>
 </Table>
 
-Returns an array of interpolations, which is a flattened data structure that you can pass as an interpolation
-itself.
+Retorna um arranjo de interpolações, o qual é uma estrutura de dados aplanada que podes passar ele mesmo como uma interpolação.
 
 ```jsx
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 const complexMixin = css`
-  color: ${props => (props.whiteColor ? 'white' : 'black')};
-`
+  color: ${(props) => (props.whiteColor ? 'white' : 'black')};
+`;
 
 const StyledComp = styled.div`
   /* This is an example of a nested interpolation */
-  ${props => (props.complex ? complexMixin : 'color: blue;')};
-`
+  ${(props) => (props.complex ? complexMixin : 'color: blue;')};
+`;
 ```
 
-If you leave off the css your function will be `toString()`ed and you'll not get the results
-you expected.
+Se deixares de fora a `css` a tua função será transformada em uma sequência de caracteres com o método `toString()` e não terás o resultado que esperavas.
