@@ -1,16 +1,16 @@
 ### `useTheme` | v5
 
-This is a custom hook to get the current theme from a `ThemeProvider`.
+Isto é um gatilho personalizado para receber o tema atual de um `ThemeProvider`.
 
 ```jsx
-import { useTheme } from 'styled-components'
+import { useTheme } from 'styled-components';
 
 function MyComponent() {
-  const theme = useTheme()
-  console.log('Current theme: ', theme)
+  const theme = useTheme();
+  console.log('Current theme: ', theme);
 
   // ...
 }
 ```
 
-> All styled components [automatically receive the theme as a prop](/docs/advanced#theming), so this is only necessary if you wish to access the theme for other reasons.
+> Todos componentes estilizados [recebem automaticamente o tema como uma propriedade](/docs/advanced#theming), assim isto só é necessário se desejares acessar o tema por outras razões.
