@@ -1,9 +1,9 @@
-## How do I use styled-components with `create-react-app`?
+## Como eu utilizo a styled-components com a `create-react-app`?
 
-The basic functionality of the library should work out of the box like any other library.
+A funcionalidade básica da biblioteca deve funcionar fora da caixa como qualquer outra biblioteca.
 
-However, if you want to do server-side rendering or take advantage of some of the advanced capabilities of the [styled-components babel plugin](/docs/tooling#babel-plugin) without ejecting you'll need to set up [`react-app-rewired`](https://github.com/timarney/react-app-rewired) and [`react-app-rewire-styled-components`](https://github.com/withspectrum/react-app-rewire-styled-components).
+No entanto, se quiseres realizar a interpretação no lado do servidor ou tirar vantagem de algumas das capacidades avançadas da [extensão da babel de styled-components](/docs/tooling#extensão-de-babel) sem ejetar precisarás configurar [`react-app-rewired`](https://github.com/timarney/react-app-rewired) e [`react-app-rewire-styled-components`](https://github.com/withspectrum/react-app-rewire-styled-components).
 
-### Babel Macro
+### Macro de Babel
 
-As of create-react-app v2, there is now an alternative to setting up `react-app-rewired` through use of "babel macros". See the [documentation for the styled-components babel macro](/docs/tooling#babel-macro) for setup and usage.
+Desde a `create-react-app` v2, já existe uma alternativa para configuração de `react-app-rewired` através do uso de "macros de babel". Consulte a [documentação para a macro de babel da styled-components](/docs/tooling#macro-de-babel) por configuração e utilização.
