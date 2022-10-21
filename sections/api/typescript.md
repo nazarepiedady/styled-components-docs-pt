@@ -1,36 +1,36 @@
 ## TypeScript
 
-styled-components has community-organized [TypeScript definitions](https://www.npmjs.com/package/@types/styled-components) on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) which powers the editing experience in IDEs and can provide types for TypeScript projects. To install them, run:
+A styled-components tem [definições de TypeScript](https://www.npmjs.com/package/@types/styled-components) organizadas pela comunidade sobre o [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) os quais alimentam a experiência de edição nas IDEs e podem fornecer tipos para os projetos de TypeScript. Para instalá-los, execute:
 
 ```sh
 # Web
-npm install --save-dev @types/styled-components
+npm install --save @types/styled-components
 
 # React Native
-npm install --save-dev @types/styled-components @types/styled-components-react-native
+npm install --save @types/styled-components @types/styled-components-react-native
 ```
 
-React Native only: If your `tsconfig` assigns `types` then you will need to add "styled-components-react-native" there.  For example:
+Apenas para React Native: se o teu `tsconfig` atribuir `types` então precisarás adicionar "styled-components-react-native" lá. Por exemplo:
 
 ```json
 "types": ["jest", "styled-components-react-native"],
 ```
 
-> Now that Babel 7 is out and the [TypeScript preset](https://babeljs.io/docs/en/babel-preset-typescript) is available, it's now possible to use the [styled-components babel plugin](/docs/tooling#babel-plugin) in conjunction with TypeScript.
+> Agora que a Babel 7 está lançada e a [definição de TypeScript](https://babeljs.io/docs/en/babel-preset-typescript) está disponível, agora é possível utilizar a [extensão de babel da styled-components](/docs/tooling#babel-plugin) combinada com a TypeScript.
 
-Before you can effectively start to use TypeScript you will have to do a little bit of configuration.
+Antes de poderes efetivamente iniciar utilizar TypeScript terás que fazer um pouco de configuração.
 
-### Create a declarations file
+### Criar um ficheiro de declarações
 
-TypeScript definitions for styled-components can be extended by using [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) since version `v4.1.4` of the definitions.
+As definições de TypeScript para styled-components podem ser estendidas utilizando a [fusão de declaração](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) desde a versão `v4.1.4` das definições.
 
-So the first step is creating a declarations file. Let's name it `styled.d.ts` for example.
+Então o primeiro passo é a criação de um ficheiro de declarações. Vamos chamá-lo de `styled.d.ts` por exemplo:
 
 ```ts
-// import original module declarations
+// importa as declarações do módulo original
 import 'styled-components';
 
-// and extend them!
+// e estende-as!
 declare module 'styled-components' {
   export interface DefaultTheme {
     borderRadius: string;
@@ -43,26 +43,11 @@ declare module 'styled-components' {
 }
 ```
 
-React-Native:
+A `DefaultTheme` está sendo utilizada como uma interface de `props.theme` fora da caixa. Por padrão a interface `DefaultTheme` está vazia então por isto que precisamos estendê-la.
 
-```ts
-declare module 'styled-components/native' {
-  export interface DefaultTheme {
-    borderRadius: string;
+### Criar um tema
 
-    colors: {
-      main: string;
-      secondary: string;
-    };
-  }
-}
-```
-
-`DefaultTheme` is being used as an interface of `props.theme` out of the box. By default the interface `DefaultTheme` is empty so that's why we need to extend it.
-
-### Create a theme
-
-Now we can create a theme just by using the `DefaultTheme` declared at the step above.
+Agora podemos criar um tema só utilizando a `DefaultTheme` declarada no passo acima.
 
 ```ts
 // my-theme.ts
@@ -98,34 +83,34 @@ export { css, ThemeProvider };
 export default styled;
 ```
 
-### Styling components
+### Estilizando componentes
 
-That's it! We're able to use styled-components just by using any original import.
+É isto! Somos capazes de utilizar a styled-components só utilizando qualquer importação original.
 
 ```jsx
 import styled, { createGlobalStyle, css } from 'styled-components';
 
-// theme is now fully typed
+// o tema agora está completamente tipado
 export const MyComponent = styled.div`
   color: ${props => props.theme.colors.main};
 `;
 
-// theme is also fully typed
+// o tema também está completamente tipado
 export MyGlobalStyle = createGlobalStyle`
   body {
     background-color: ${props => props.theme.colors.secondary};
   }
 `;
 
-// and this theme is fully typed as well
+// e este tema também está completamente tipado
 export cssHelper = css`
   border: 1px solid ${props => props.theme.borderRadius};
 `;
 ```
 
-### Using custom props
+### Utilizando propriedades personalizadas
 
-If you are [adapting the styles based on props](https://styled-components.com/docs/basics#adapting-based-on-props), and those props are not part of the base tag / component props, you can tell TypeScript what those extra custom props are, with type arguments like this ([TypeScript `v2.9+` is required](https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#generic-type-arguments-in-generic-tagged-templates)):
+Se estiveres [adaptando os estilos com base nas propriedades](https://styled-components.com/docs/basics#adaptando-os-estilos-com-base-nas-propriedades), e estas propriedades não são parte do marcador / propriedades de componente de base, podes dizer a TypeScript o que estas propriedades adicionais são, com argumentos de tipo tal como este ([TypeScript `v2.9+` é obrigatório](https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#generic-type-arguments-in-generic-tagged-templates)):
 
 ```tsx
 import styled from 'styled-components';
@@ -140,9 +125,9 @@ const Title = styled.h1<TitleProps>`
 `;
 ```
 
-Note: if you style a standard tag (like `<h1>` in above example), styled-components [will not pass the custom props](https://styled-components.com/docs/basics#passed-props) (to avoid the [Unknown Prop Warning](https://reactjs.org/warnings/unknown-prop.html)).
+Nota: se estilizares um marcador padrão (como `<h1>` no exemplo acima), a styled-components [não passará as propriedades personalizadas](https://styled-components.com/docs/basics#propriedades-passadas) (para evitar o [Aviso de Propriedade Desconhecida](https://reactjs.org/warnings/unknown-prop.html)).
 
-However, it will pass all of them to a custom React component:
+No entanto, ele passará todas elas para um componente de React personalizado:
 
 ```tsx
 import styled from 'styled-components';
@@ -151,10 +136,10 @@ import Header from './Header';
 const NewHeader = styled(Header)<{ customColor: string }>`
   color: ${(props) => props.customColor};
 `;
-// Header will also receive props.customColor
+// Header também receberá "props.customColor"
 ```
 
-If the **customColor** property should not be transferred to the **Header** component, you can leverage [transient props](https://styled-components.com/docs/api#transient-props), by prefixing it with a dollar sign ($):
+Se a propriedade **customColor** não deveria ser transferida para o componente **Header**, podes influenciar as [propriedades transitórias](https://styled-components.com/docs/api#propriedades-transitórias), prefixando-o com um sinal de dólar ($):
 
 ```tsx
 import styled from 'styled-components';
@@ -163,10 +148,10 @@ import Header from './Header';
 const NewHeader2 = styled(Header)<{ $customColor: string }>`
   color: ${(props) => props.$customColor};
 `;
-// Header does NOT receive props.$customColor
+// Header não recebe "props.$customColor"
 ```
 
-Depending on your use case, you can achieve a similar result by extracting the custom props yourself:
+Dependo do teu caso de uso, podes alcançar um resultado semelhante extraindo as propriedades personalizadas por ti mesmo:
 
 ```tsx
 import styled from 'styled-components';
@@ -177,7 +162,7 @@ const NewHeader3 = styled(({ customColor, ...rest }: { customColor: string } & H
 `;
 ```
 
-Or using [shouldForwardProp](https://styled-components.com/docs/api#shouldforwardprop):
+Ou utilizando [shouldForwardProp](https://styled-components.com/docs/api#shouldforwardprop):
 
 ```tsx
 import styled from 'styled-components';
@@ -190,14 +175,13 @@ const NewHeader4 = styled(Header).withConfig({
 `;
 ```
 
-### Caveat with `className`
+### Advertência com `className`
 
-When defining a component you will need to mark `className` as optional
-in your Props interface:
+Quando estiveres definindo um componente que precisarás para marcar `className` como opcional na tua interface de propriedades:
 
 ```jsx
 interface LogoProps {
-  /* This prop is optional, since TypeScript won't know that it's passed by the wrapper */
+  /* Esta propriedade é opcional, já que a TypeScript não saberá que é passada pelo envolvedor */
   className?: string;
 }
 
@@ -214,11 +198,10 @@ const LogoStyled = styled(Logo)`
 `;
 ```
 
-### Caveat with Function Components
+### Advertência com Componentes de Função
 
 To use function components and have typechecking for the props you'll need to define
-the component alongside with its type. This is not special to styled-components, this is just
-how React works:
+Para utilizar os componentes de função e tiveres verificação de tipo para as propriedades que precisarás para definir o componente junto de seu tipo. Isto não é especial a styled-components, isto é apenas como a React funciona:
 
 ```jsx
 interface BoxProps {
