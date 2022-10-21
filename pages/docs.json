@@ -101,13 +101,13 @@
       "pathname": "tooling",
       "sections": [
         {
-          "title": "Extensão Babel"
+          "title": "Extensão de Babel"
         },
         {
-          "title": "Macro Babel"
+          "title": "Macro de Babel"
         },
         {
-          "title": "Extensão TypeScript"
+          "title": "Extensão de TypeScript"
         },
         {
           "title": "Integração de Jest"
@@ -152,7 +152,7 @@
           "title": "Quando utilizar atributos?"
         },
         {
-          "title": "Porquê deveria evitar declaração de componentes estilizados no método 'render'?"
+          "title": "Porquê deveria evitar declaração de componentes estilizados no método render?"
         },
         {
           "title": "Eu sou um autor de biblioteca. Eu deveria empacotar styled-components com a minha biblioteca?"
@@ -167,16 +167,16 @@
           "title": "Quais navegadores são suportados?"
         },
         {
-          "title": "Como é que eu utilizo 'styled-components' com 'create-react-app'?"
+          "title": "Como eu utilizo a styled-components com a create-react-app?"
         },
         {
-          "title": "Como eu posso corrigir problemas quando estiver utilizando 'npm link' ou 'yarn link'?"
+          "title": "Como eu posso corrigir problemas quando estiver utilizando npm link ou yarn link?"
         },
         {
           "title": "Como eu corrijo o texto tremente depois interpretação no lado do servidor?"
         },
         {
-          "title": "Declarações Faltando para 'styled-components/native'?"
+          "title": "Declarações Faltando para styled-components/native?"
         }
       ]
     }
