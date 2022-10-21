@@ -1,9 +1,8 @@
-## Can I nest rules?
+## Posso encaixar regras?
 
-Yes: nesting is a feature intentionally ported from Sass. Used sparingly it's a
-great way to lighten your code by reducing the need to create explicit classes for every element.
+Sim: encaixamento é uma funcionalidade intencionalmente importada de Sass. Utilizada com moderação é uma excelente maneira para iluminar o teu código reduzindo a necessidade de criar classes explícitas para cada elemento.
 
-It can also be used by parent components to define contextual constraints that aren't properly a concern of the affected children:
+Também pode ser utilizado pelos componentes pai para definir restrições contextuais que não são propriamente uma preocupação dos filhos afetados:
 
 ```react
 const EqualDivider = styled.div`
@@ -43,8 +42,7 @@ render(
 );
 ```
 
-It's also incredibly convenient to co-locate media queries, since we can see at a glance
-exactly how the component will respond at any resolution.
+Também é incrivelmente conveniente colocar as consultas de media, já que podemos ver de relance exatamente como o componente responderá em qualquer resolução.
 
 ```react
 const ColorChanger = styled.section`
