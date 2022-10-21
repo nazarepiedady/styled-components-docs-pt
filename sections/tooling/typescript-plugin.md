@@ -1,7 +1,7 @@
-## TypeScript Plugin
+## Extensão de TypeScript
 
-[`typescript-plugin-styled-components`](https://github.com/Igorbek/typescript-plugin-styled-components) is a plugin for TypeScript that gives you a nicer debugging experience.
+A [`typescript-plugin-styled-components`](https://github.com/Igorbek/typescript-plugin-styled-components) é uma extensão para TypeScript que oferece-te uma experiência de depuração mais agradável.
 
-> ⚠️ TypeScript does not allow to use any plugin or transformer directly from the command line compiler `tsc`. So the plugin only works with build toolchains such as `webpack` with one of TypeScript loaders. There's [an open issue](https://github.com/Microsoft/TypeScript/issues/16607) to bring plugins to tsc though if you want to upvote it!
+> ⚠️ TypeScript não permite utilizar nenhuma extensão ou transformador diretamente do compilador de linha de comando `tsc`. Assim a extensão apenas funciona com as correntes de ferramenta de construção tais como `webpack` com um dos carregadores de TypeScript. Existe [uma questão em aberto](https://github.com/Microsoft/TypeScript/issues/16607) para trazer extensões para `tsc` mesmo assim se quiseres vota-la!
 
-Please refer to [the project's GitHub repo](https://github.com/Igorbek/typescript-plugin-styled-components) for documentation.
+Por favor consulte o [repositório da GitHub do projeto](https://github.com/Igorbek/typescript-plugin-styled-components) pela documentação.
